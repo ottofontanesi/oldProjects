@@ -1,0 +1,35 @@
+{
+  "id": "contract-reticulum-lifecycle-states",
+  "version": "1.0.0",
+  "description": "Sidecar transitions produce valid SidecarHealthState values. The health state SHALL be exactly one of: running, starting, offline, or crashed. Transitions follow defined paths only.",
+  "category": "state-normalization",
+  "preconditions": [
+    {
+      "description": "Reticulum channel service is initialized with default config"
+    },
+    {
+      "description": "Sidecar health state starts as 'offline'"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "After any sequence of lifecycle events, the SidecarHealthState is one of the four valid values and only valid transitions occurred",
+    "assertion": "matches-schema",
+    "expected": {
+      "validStates": ["running", "starting", "offline", "crashed"],
+      "validTransitions": {
+        "starting": ["running", "offline"],
+        "running": ["crashed", "offline"],
+        "crashed": ["starting"],
+        "offline": ["starting"]
+      }
+    }
+  },
+  "verificationMethod": {
+    "type": "unit-test",
+    "testFile": "src-tauri/src/reticulum_channel_proptest.rs",
+    "testName": "proptest_lifecycle::prop_health_state_always_valid"
+  },
+  "referencedComponents": ["reticulumChannelService", "sidecarHealthState"],
+  "createdAt": "2025-01-01T00:00:00Z",
+  "updatedAt": "2025-01-01T00:00:00Z"
+}

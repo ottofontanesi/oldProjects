@@ -1,0 +1,27 @@
+{
+  "id": "contract-evaluator-network-isolation",
+  "version": "1.0.0",
+  "description": "All sandbox environments enforce ComputeNetworkMode 'none' or 'loopback-only'. No evaluation job permits external network access.",
+  "category": "agent-evaluator",
+  "preconditions": [
+    {
+      "description": "An evaluation job is submitted to the Compute Fabric"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "The sandbox job spec networkPolicy.mode is always 'none' or 'loopback-only'. shouldBlockNetworkAccess returns true for all external destinations in 'none' mode.",
+    "assertion": "truthy"
+  },
+  "verificationMethod": {
+    "type": "property-test",
+    "testFile": "src/core/agent-evaluator-approval.test.ts",
+    "testName": "Property 3: Network isolation enforcement"
+  },
+  "referencedComponents": [
+    "createSandboxJobSpec",
+    "shouldBlockNetworkAccess",
+    "SandboxConfig"
+  ],
+  "createdAt": "2025-07-20T00:00:00Z",
+  "updatedAt": "2025-07-20T00:00:00Z"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "contract-rl-confidence-range",
+  "version": "1.0.0",
+  "description": "RL confidence score is always in the range [0.0, 1.0] inclusive for any inference output",
+  "category": "rl-policy",
+  "preconditions": [
+    {
+      "description": "Any output from the RL inference service"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "The confidence_score field is >= 0.0 and <= 1.0",
+    "assertion": "truthy"
+  },
+  "verificationMethod": {
+    "type": "unit-test",
+    "testFile": "src/core/rl-behavioral-contracts.test.ts",
+    "testName": "confidence score always in [0, 1]"
+  },
+  "referencedComponents": [
+    "RLRecommendation",
+    "RLInferenceService"
+  ],
+  "createdAt": "2025-07-14T00:00:00Z",
+  "updatedAt": "2025-07-14T00:00:00Z"
+}

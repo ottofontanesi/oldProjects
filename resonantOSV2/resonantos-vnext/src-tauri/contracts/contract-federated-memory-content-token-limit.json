@@ -1,0 +1,10 @@
+{
+  "contractId": "contract-federated-memory-content-token-limit",
+  "version": "1.0.0",
+  "description": "Content exceeding 200 tokens is rejected — write returns accepted: false with error message, store remains unchanged",
+  "property": "Property 12: For any string whose estimated token count exceeds 200, a write to Federated Memory SHALL be rejected with accepted: false and a non-empty error field, and the store contents SHALL remain unchanged",
+  "validatesRequirements": ["7.4"],
+  "testStrategy": "proptest",
+  "testLocation": "src-tauri/src/federated_memory_service.rs",
+  "enforcedBy": "cargo test"
+}

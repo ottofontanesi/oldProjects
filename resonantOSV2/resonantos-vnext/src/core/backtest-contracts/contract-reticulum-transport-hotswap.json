@@ -1,0 +1,27 @@
+{
+  "id": "contract-reticulum-transport-hotswap",
+  "version": "1.0.0",
+  "description": "Transport configuration changes applied without restart. When the user modifies transport interface settings, the changes take effect on the next message send without requiring a full sidecar restart.",
+  "category": "state-normalization",
+  "preconditions": [
+    {
+      "description": "Reticulum channel is running with active transport interfaces"
+    },
+    {
+      "description": "User modifies transport configuration via settings panel"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "Updated bandwidth profiles and transport settings are applied to subsequent message handling without sidecar restart",
+    "assertion": "truthy",
+    "expected": true
+  },
+  "verificationMethod": {
+    "type": "unit-test",
+    "testFile": "src/core/reticulum-channel.test.ts",
+    "testName": "shouldSummarize"
+  },
+  "referencedComponents": ["reticulumChannel", "bandwidthProfile", "transportConfig"],
+  "createdAt": "2025-01-01T00:00:00Z",
+  "updatedAt": "2025-01-01T00:00:00Z"
+}

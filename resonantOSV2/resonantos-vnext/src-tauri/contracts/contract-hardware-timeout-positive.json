@@ -1,0 +1,47 @@
+{
+  "contractId": "hardware-timeout-positive",
+  "version": "1.0.0",
+  "phase": 7,
+  "description": "All timeout values in any TimeoutProfile are positive integers greater than zero",
+  "category": "correctness",
+  "property": "For any TimeoutProfile, all timeout values SHALL be positive integers greater than zero",
+  "invariants": [
+    {
+      "id": "inference-timeout-positive",
+      "description": "inference_ms > 0",
+      "assertion": "profile.inference_ms > 0"
+    },
+    {
+      "id": "tool-execution-timeout-positive",
+      "description": "tool_execution_ms > 0",
+      "assertion": "profile.tool_execution_ms > 0"
+    },
+    {
+      "id": "health-check-timeout-positive",
+      "description": "health_check_ms > 0",
+      "assertion": "profile.health_check_ms > 0"
+    },
+    {
+      "id": "network-request-timeout-positive",
+      "description": "network_request_ms > 0",
+      "assertion": "profile.network_request_ms > 0"
+    },
+    {
+      "id": "database-query-timeout-positive",
+      "description": "database_query_ms > 0",
+      "assertion": "profile.database_query_ms > 0"
+    },
+    {
+      "id": "compute-job-timeout-positive",
+      "description": "compute_job_ms > 0",
+      "assertion": "profile.compute_job_ms > 0"
+    }
+  ],
+  "testStrategy": "property-based",
+  "triggerConditions": [
+    "code-change-in-timeout-profile",
+    "regression-suite"
+  ],
+  "failureAction": "block-merge",
+  "relatedRequirements": ["3.1", "3.2"]
+}

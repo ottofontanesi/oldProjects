@@ -1,0 +1,26 @@
+{
+  "id": "contract-tracker-classification-exhaustive",
+  "version": "1.0.0",
+  "description": "For any ToolCallRecord within a trace, classify_tool_call returns exactly one of Useful or Redundant; the sum of useful + redundant classifications equals the total number of records",
+  "category": "tool-call-tracker",
+  "preconditions": [
+    {
+      "description": "A trace of tool call records is submitted for classification"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "Every record receives exactly one classification (mutual exclusivity) and no records are left unclassified (exhaustiveness)",
+    "assertion": "truthy"
+  },
+  "verificationMethod": {
+    "type": "property-test",
+    "testFile": "src-tauri/src/tool_call_analysis.rs",
+    "testName": "Property 5: Classification mutual exclusivity and exhaustiveness"
+  },
+  "referencedComponents": [
+    "tool_call_analysis::classify_tool_call",
+    "tool_call_analysis::CallClassification"
+  ],
+  "createdAt": "2026-07-15T00:00:00Z",
+  "updatedAt": "2026-07-15T00:00:00Z"
+}

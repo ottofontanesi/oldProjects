@@ -1,0 +1,27 @@
+{
+  "id": "contract-tracker-anomaly-threshold-enforcement",
+  "version": "1.0.0",
+  "description": "check_anomaly returns Some(AnomalyFlag) if and only if efficiency_ratio < threshold OR total_calls > historical_avg × multiplier; reason is LowEfficiency, ExcessiveCalls, or Both accordingly; returns None when neither condition holds",
+  "category": "tool-call-tracker",
+  "preconditions": [
+    {
+      "description": "A completed task analysis provides efficiency_ratio, total_calls, and historical_avg_calls"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "Anomaly flag is raised with correct reason when thresholds are exceeded, and no flag is raised when within normal bounds",
+    "assertion": "truthy"
+  },
+  "verificationMethod": {
+    "type": "property-test",
+    "testFile": "src-tauri/src/tool_call_analysis.rs",
+    "testName": "Property 8: Anomaly detection correctness"
+  },
+  "referencedComponents": [
+    "tool_call_analysis::check_anomaly",
+    "tool_call_analysis::AnomalyFlag",
+    "tool_call_analysis::AnomalyReason"
+  ],
+  "createdAt": "2026-07-15T00:00:00Z",
+  "updatedAt": "2026-07-15T00:00:00Z"
+}

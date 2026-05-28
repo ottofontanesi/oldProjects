@@ -1,0 +1,26 @@
+{
+  "id": "contract-rl-replay-buffer-capped",
+  "version": "1.0.0",
+  "description": "Prioritized replay buffer never exceeds max_size (10,000 episodes) — lowest-priority entries are evicted at capacity",
+  "category": "rl-policy",
+  "preconditions": [
+    {
+      "description": "Replay buffer is at or near capacity during training"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "Buffer size is always <= max_size after any add operation",
+    "assertion": "truthy"
+  },
+  "verificationMethod": {
+    "type": "unit-test",
+    "testFile": "src/core/rl-behavioral-contracts.test.ts",
+    "testName": "replay buffer capped at max size"
+  },
+  "referencedComponents": [
+    "PrioritizedReplayBuffer",
+    "TrainingPipeline"
+  ],
+  "createdAt": "2025-07-14T00:00:00Z",
+  "updatedAt": "2025-07-14T00:00:00Z"
+}

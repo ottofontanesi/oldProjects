@@ -1,0 +1,27 @@
+{
+  "id": "contract-archive-access-policy-enforcement",
+  "version": "1.0.0",
+  "description": "Archive access policy enforces read-only scope for addon agents without write grants",
+  "category": "archive-access",
+  "preconditions": [
+    {
+      "description": "An addon agent with archive-read capability but no archive-intake-write grant"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "Archive operations reject write attempts and allow read operations",
+    "assertion": "truthy",
+    "expected": null
+  },
+  "verificationMethod": {
+    "type": "integration",
+    "ipcCommand": "archive_access_check",
+    "payload": { "agentId": "test-addon", "operation": "write", "scope": "intake" }
+  },
+  "referencedComponents": [
+    "ResonantShellState.archivePolicy",
+    "ResonantShellState.installations"
+  ],
+  "createdAt": "2026-06-01T00:00:00.000Z",
+  "updatedAt": "2026-06-01T00:00:00.000Z"
+}

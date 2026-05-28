@@ -1,0 +1,27 @@
+{
+  "id": "contract-tracker-experience-buffer-appendage",
+  "version": "1.0.0",
+  "description": "After analysis completes, the ToolCallTraceSummary is appended to the matching ExperienceRecord via UPDATE; if no matching record exists, a standalone_trace_summary is created for retroactive linking; a periodic job (every 60s) attempts to link standalone records",
+  "category": "tool-call-tracker",
+  "preconditions": [
+    {
+      "description": "A task analysis completes and produces a ToolCallTraceSummary"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "The trace summary is stored in experience_records.tool_call_trace_json if a matching record exists, otherwise in standalone_trace_summaries with linked=0 for later reconciliation",
+    "assertion": "truthy"
+  },
+  "verificationMethod": {
+    "type": "integration-test",
+    "testFile": "src-tauri/src/tool_call_tracker_service.rs",
+    "testName": "test_append_to_experience_buffer_success"
+  },
+  "referencedComponents": [
+    "tool_call_tracker_service::append_to_experience_buffer",
+    "tool_call_tracker_service::append_trace_with_fallback",
+    "tool_call_tracker_service::retroactive_linking_job"
+  ],
+  "createdAt": "2026-07-15T00:00:00Z",
+  "updatedAt": "2026-07-15T00:00:00Z"
+}

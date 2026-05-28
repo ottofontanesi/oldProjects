@@ -1,0 +1,26 @@
+{
+  "id": "contract-evaluator-cleanroom-policy",
+  "version": "1.0.0",
+  "description": "Evaluation jobs are submitted with correct cleanroom workspace policies: jobType 'cleanroom-container-job', workspacePolicy mode 'cleanroom', requiredNodeRoles include 'cleanroom-runner' and 'container-runner'.",
+  "category": "agent-evaluator",
+  "preconditions": [
+    {
+      "description": "A candidate is approved for sandbox testing"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "createSandboxJobSpec always produces a spec with jobType 'cleanroom-container-job', workspacePolicy.mode 'cleanroom', and correct node roles.",
+    "assertion": "truthy"
+  },
+  "verificationMethod": {
+    "type": "unit-test",
+    "testFile": "src/core/agent-evaluator-sandbox.test.ts",
+    "testName": "creates job with correct jobType and roles"
+  },
+  "referencedComponents": [
+    "createSandboxJobSpec",
+    "SandboxJobSpec"
+  ],
+  "createdAt": "2025-07-20T00:00:00Z",
+  "updatedAt": "2025-07-20T00:00:00Z"
+}

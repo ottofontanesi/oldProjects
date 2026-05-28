@@ -1,0 +1,26 @@
+{
+  "id": "contract-tracker-record-creation",
+  "version": "1.0.0",
+  "description": "Every tool call produces a structurally complete ToolCallRecord with non-empty id, delegation_packet_id, agent_id, task_type, tool_name, valid JSON input_params_json, output_summary ≤ 500 tokens, duration_ms ≥ 0, boolean success, valid ISO-8601 timestamp, and sequence_position ≥ 1",
+  "category": "tool-call-tracker",
+  "preconditions": [
+    {
+      "description": "A tool execution completes (success or failure) within a DelegationPacket context"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "A ToolCallRecord is created with all required fields populated and valid, then sent to the mpsc channel for buffered persistence",
+    "assertion": "truthy"
+  },
+  "verificationMethod": {
+    "type": "property-test",
+    "testFile": "src-tauri/src/tool_call_tracker_service.rs",
+    "testName": "Property 1: Tool Call Record structural completeness"
+  },
+  "referencedComponents": [
+    "tool_call_tracker_service::log_tool_call",
+    "tool_call_tracker_service::ToolCallRecord"
+  ],
+  "createdAt": "2026-07-15T00:00:00Z",
+  "updatedAt": "2026-07-15T00:00:00Z"
+}

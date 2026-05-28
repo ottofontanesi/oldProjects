@@ -1,0 +1,26 @@
+{
+  "id": "contract-evaluator-cost-attribution",
+  "version": "1.0.0",
+  "description": "Cost_Attribution_Records are written for all evaluation compute costs with consumerId set to the Agent Evaluator's identifier and accurate compute time and token counts.",
+  "category": "agent-evaluator",
+  "preconditions": [
+    {
+      "description": "An evaluation job completes (successfully or with failure)"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "A cost attribution record is produced with consumerId 'agent-evaluator-na2', non-zero computeTimeMinutes, and accurate tokensConsumed.",
+    "assertion": "truthy"
+  },
+  "verificationMethod": {
+    "type": "property-test",
+    "testFile": "src/core/agent-evaluator-properties.test.ts",
+    "testName": "Property 13: Cost attribution completeness"
+  },
+  "referencedComponents": [
+    "EvaluationCostReport",
+    "CostDashboardReporting"
+  ],
+  "createdAt": "2025-07-20T00:00:00Z",
+  "updatedAt": "2025-07-20T00:00:00Z"
+}

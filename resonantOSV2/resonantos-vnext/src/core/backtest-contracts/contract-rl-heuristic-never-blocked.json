@@ -1,0 +1,26 @@
+{
+  "id": "contract-rl-heuristic-never-blocked",
+  "version": "1.0.0",
+  "description": "The heuristic router is never blocked by RL unavailability — it always proceeds independently",
+  "category": "rl-policy",
+  "preconditions": [
+    {
+      "description": "RL service is unavailable, crashed, timed out, or in cold start"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "The heuristic router completes without error and returns a valid routing decision",
+    "assertion": "truthy"
+  },
+  "verificationMethod": {
+    "type": "unit-test",
+    "testFile": "src/core/rl-behavioral-contracts.test.ts",
+    "testName": "heuristic never blocked by RL"
+  },
+  "referencedComponents": [
+    "RLAdvisoryIntegration",
+    "ProviderService.resolveProviderRoute"
+  ],
+  "createdAt": "2025-07-14T00:00:00Z",
+  "updatedAt": "2025-07-14T00:00:00Z"
+}

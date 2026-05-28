@@ -1,0 +1,27 @@
+{
+  "id": "contract-evaluator-provenance-unverified",
+  "version": "1.0.0",
+  "description": "All candidate agents receive provenanceTier 'sideloaded-unverified' and trustTier 'addon' regardless of any claims in the candidate's manifest.",
+  "category": "agent-evaluator",
+  "preconditions": [
+    {
+      "description": "A candidate agent is approved for installation"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "prepareInstallation always returns provenanceTier 'sideloaded-unverified' and trustTier 'addon'. processApprovalDecision always sets these tiers.",
+    "assertion": "truthy"
+  },
+  "verificationMethod": {
+    "type": "property-test",
+    "testFile": "src/core/agent-evaluator-approval.test.ts",
+    "testName": "Property 2: Provenance tier enforcement"
+  },
+  "referencedComponents": [
+    "prepareInstallation",
+    "processApprovalDecision",
+    "prepareSandboxInstallation"
+  ],
+  "createdAt": "2025-07-20T00:00:00Z",
+  "updatedAt": "2025-07-20T00:00:00Z"
+}

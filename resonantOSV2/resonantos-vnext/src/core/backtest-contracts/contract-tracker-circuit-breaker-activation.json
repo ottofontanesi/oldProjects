@@ -1,0 +1,27 @@
+{
+  "id": "contract-tracker-circuit-breaker-activation",
+  "version": "1.0.0",
+  "description": "The circuit breaker opens after exactly 5 consecutive persistence failures, disabling logging until cooldown expires; any success resets the failure count and closes the breaker; exponential backoff caps at 5 minutes",
+  "category": "tool-call-tracker",
+  "preconditions": [
+    {
+      "description": "The buffer writer task experiences consecutive flush failures"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "After 5 failures the breaker opens, records are dropped, and after cooldown a recovery attempt is made with exponential backoff",
+    "assertion": "truthy"
+  },
+  "verificationMethod": {
+    "type": "property-test",
+    "testFile": "src-tauri/src/tool_call_tracker_service.rs",
+    "testName": "Property 9: Circuit breaker state transitions"
+  },
+  "referencedComponents": [
+    "tool_call_tracker_service::CircuitBreakerState",
+    "tool_call_tracker_service::handle_flush_failure",
+    "tool_call_tracker_service::buffer_writer_task"
+  ],
+  "createdAt": "2026-07-15T00:00:00Z",
+  "updatedAt": "2026-07-15T00:00:00Z"
+}

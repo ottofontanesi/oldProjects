@@ -1,0 +1,32 @@
+{
+  "contractId": "fix-requires-confirmation",
+  "version": "1.0.0",
+  "phase": 8,
+  "description": "The Doctor never auto-applies fixes without explicit user confirmation. All fix applications require a prior user action.",
+  "category": "safety",
+  "property": "For any AutoFix application, the system SHALL NOT modify configuration without prior user confirmation. The fix record SHALL be persisted with previous values for rollback.",
+  "invariants": [
+    {
+      "id": "no-auto-apply",
+      "description": "No fix is applied without an explicit apply_fix or apply_fix_batch IPC call from the UI",
+      "assertion": "fix_applied_count == user_confirmed_fix_count"
+    },
+    {
+      "id": "fix-record-persisted",
+      "description": "Every applied fix must have a corresponding FixRecord with previous values stored",
+      "assertion": "for_each(applied_fix, fix_history.contains(fix.id) && fix_record.previous_values != null)"
+    },
+    {
+      "id": "rollback-possible",
+      "description": "For reversible fixes, the previous values must be sufficient to restore the original state",
+      "assertion": "for_each(reversible_fix, apply(fix.previous_values) restores original state)"
+    }
+  ],
+  "testStrategy": "property-based",
+  "triggerConditions": [
+    "fix-applied",
+    "manual-trigger"
+  ],
+  "failureAction": "block-merge",
+  "relatedRequirements": ["5.3", "5.6"]
+}

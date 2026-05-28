@@ -1,0 +1,10 @@
+{
+  "contractId": "contract-cost-ledger-accurate-persistence",
+  "version": "1.0.0",
+  "description": "Cost record persistence round-trip — writing and reading back produces identical field values",
+  "property": "Property 6: For any valid CostRecord (non-empty agent_id, valid task_type, non-negative token counts), writing to the Cost Ledger and reading back by ID SHALL produce a record where all fields are equal to the original",
+  "validatesRequirements": ["4.2", "4.3"],
+  "testStrategy": "proptest",
+  "testLocation": "src-tauri/src/cost_ledger_service.rs",
+  "enforcedBy": "cargo test"
+}

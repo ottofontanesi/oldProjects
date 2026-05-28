@@ -1,0 +1,31 @@
+{
+  "id": "contract-reticulum-inbound-insertion",
+  "version": "1.0.0",
+  "description": "Inbound messages correctly inserted into ConversationThreads. For any valid message_received notification, exactly one ConversationMessage is created with role 'user', correct author attribution, and channelId set to the Reticulum channel.",
+  "category": "state-normalization",
+  "preconditions": [
+    {
+      "description": "Reticulum channel database is initialized"
+    },
+    {
+      "description": "A valid message_received notification is received from the sidecar"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "A ConversationMessage is inserted with role 'user', author from source_name or destination hash, and channelId 'reticulum-mesh-channel'",
+    "assertion": "matches-schema",
+    "expected": {
+      "role": "user",
+      "channelId": "reticulum-mesh-channel",
+      "authorSource": "source_name OR source_hash"
+    }
+  },
+  "verificationMethod": {
+    "type": "unit-test",
+    "testFile": "src-tauri/src/reticulum_channel_proptest.rs",
+    "testName": "proptest_inbound::prop_inbound_message_creates_peer_and_thread"
+  },
+  "referencedComponents": ["reticulumChannelService", "conversationThread"],
+  "createdAt": "2025-01-01T00:00:00Z",
+  "updatedAt": "2025-01-01T00:00:00Z"
+}

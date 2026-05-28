@@ -1,0 +1,27 @@
+{
+  "id": "contract-evaluator-cleanup-policy",
+  "version": "1.0.0",
+  "description": "Sandbox cleanup occurs per configured policy: 'delete-on-success' removes artifacts within 5 minutes, 'retain-for-review' preserves for the configured retention period before automatic cleanup.",
+  "category": "agent-evaluator",
+  "preconditions": [
+    {
+      "description": "An evaluation completes or a retention period expires"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "computeCleanupSchedule produces correct expiration times: 5 minutes for delete-on-success, retentionDays for retain-for-review. isArtifactExpired correctly identifies expired entries.",
+    "assertion": "truthy"
+  },
+  "verificationMethod": {
+    "type": "property-test",
+    "testFile": "src/core/agent-evaluator-properties.test.ts",
+    "testName": "Property 7: Cleanup policy enforcement"
+  },
+  "referencedComponents": [
+    "computeCleanupSchedule",
+    "isArtifactExpired",
+    "CleanupScheduleEntry"
+  ],
+  "createdAt": "2025-07-20T00:00:00Z",
+  "updatedAt": "2025-07-20T00:00:00Z"
+}

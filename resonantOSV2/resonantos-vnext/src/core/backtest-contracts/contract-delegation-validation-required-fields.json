@@ -1,0 +1,27 @@
+{
+  "id": "contract-delegation-validation-required-fields",
+  "version": "1.0.0",
+  "description": "Delegation packet validation rejects packets missing required fields",
+  "category": "delegation-validation",
+  "preconditions": [
+    {
+      "description": "A delegation packet with missing mission field"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "validateDelegationPacket returns valid:false with error identifying missing field",
+    "assertion": "truthy",
+    "expected": null
+  },
+  "verificationMethod": {
+    "type": "unit-test",
+    "testFile": "src/core/delegation.test.ts",
+    "testName": "rejects a packet with empty mission"
+  },
+  "referencedComponents": [
+    "ResonantShellState.agents",
+    "ResonantShellState.workspaces"
+  ],
+  "createdAt": "2026-06-01T00:00:00.000Z",
+  "updatedAt": "2026-06-01T00:00:00.000Z"
+}

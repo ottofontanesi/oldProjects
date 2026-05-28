@@ -1,0 +1,28 @@
+{
+  "id": "contract-evaluator-circuit-breaker",
+  "version": "1.0.0",
+  "description": "Circuit breaker activates after 5 consecutive discovery source fetch failures and auto-recovers after a configurable cooldown period (default 1 hour).",
+  "category": "agent-evaluator",
+  "preconditions": [
+    {
+      "description": "Discovery polling is active and encountering failures"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "After 5 consecutive failures, isOpen transitions to true. After cooldown expires, isCircuitBreakerAllowing returns true. Any success resets consecutiveFailures to 0.",
+    "assertion": "truthy"
+  },
+  "verificationMethod": {
+    "type": "unit-test",
+    "testFile": "src/core/agent-evaluator.test.ts",
+    "testName": "opens after 5 consecutive failures"
+  },
+  "referencedComponents": [
+    "recordCircuitBreakerFailure",
+    "recordCircuitBreakerSuccess",
+    "isCircuitBreakerAllowing",
+    "DiscoveryCircuitBreakerState"
+  ],
+  "createdAt": "2025-07-20T00:00:00Z",
+  "updatedAt": "2025-07-20T00:00:00Z"
+}

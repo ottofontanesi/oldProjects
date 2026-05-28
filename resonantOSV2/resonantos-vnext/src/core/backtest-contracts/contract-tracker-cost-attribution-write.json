@@ -1,0 +1,27 @@
+{
+  "id": "contract-tracker-cost-attribution-write",
+  "version": "1.0.0",
+  "description": "For each ToolCallRecord with is_llm_backed=true, a CostRecord is created with estimated cost (paid-api rate) and written to the Cost Ledger via record_cost_entry; non-LLM tool calls are skipped",
+  "category": "tool-call-tracker",
+  "preconditions": [
+    {
+      "description": "A task analysis completes and the trace contains LLM-backed tool calls with prompt_tokens and completion_tokens"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "Cost records are written to cost_ledger.db for each LLM-backed tool call with correct token counts and estimated cost; non-LLM calls produce no cost records",
+    "assertion": "truthy"
+  },
+  "verificationMethod": {
+    "type": "integration-test",
+    "testFile": "src-tauri/src/tool_call_tracker_service.rs",
+    "testName": "test_write_cost_attributions"
+  },
+  "referencedComponents": [
+    "tool_call_tracker_service::write_cost_attributions",
+    "cost_ledger_service::record_cost_entry",
+    "cost_ledger_service::estimate_cost_usd"
+  ],
+  "createdAt": "2026-07-15T00:00:00Z",
+  "updatedAt": "2026-07-15T00:00:00Z"
+}

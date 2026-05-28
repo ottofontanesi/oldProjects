@@ -1,0 +1,37 @@
+{
+  "contractId": "hardware-envelope-sum",
+  "version": "1.0.0",
+  "phase": 7,
+  "description": "Resource envelope allocations never exceed 100% of available resources",
+  "category": "correctness",
+  "property": "For any set of ResourceEnvelopes, the sum of cpu_percent across all envelopes SHALL NOT exceed 100, and the sum of gpu_percent SHALL NOT exceed 100",
+  "invariants": [
+    {
+      "id": "cpu-sum-bounded",
+      "description": "Sum of cpu_percent across all envelopes <= 100",
+      "assertion": "sum(envelopes.map(e => e.cpu_percent)) <= 100"
+    },
+    {
+      "id": "gpu-sum-bounded",
+      "description": "Sum of gpu_percent across all envelopes <= 100",
+      "assertion": "sum(envelopes.filter(e => e.gpu_percent != null).map(e => e.gpu_percent)) <= 100"
+    },
+    {
+      "id": "ram-sum-bounded",
+      "description": "Sum of ram_mb across all envelopes <= total_ram_mb",
+      "assertion": "sum(envelopes.map(e => e.ram_mb)) <= total_ram_mb"
+    },
+    {
+      "id": "no-negative-allocations",
+      "description": "All allocation values are non-negative",
+      "assertion": "all(envelopes.map(e => e.cpu_percent >= 0 && e.ram_mb >= 0))"
+    }
+  ],
+  "testStrategy": "property-based",
+  "triggerConditions": [
+    "code-change-in-resource-envelopes",
+    "regression-suite"
+  ],
+  "failureAction": "block-merge",
+  "relatedRequirements": ["5.2"]
+}

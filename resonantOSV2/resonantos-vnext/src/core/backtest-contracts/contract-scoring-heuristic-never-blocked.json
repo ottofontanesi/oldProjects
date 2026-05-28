@@ -1,0 +1,28 @@
+{
+  "id": "contract-scoring-heuristic-never-blocked",
+  "version": "1.0.0",
+  "description": "The heuristic router is never blocked by scoring engine unavailability or computation",
+  "category": "provider-routing",
+  "preconditions": [
+    {
+      "description": "The scoring engine is computing a recommendation or is unavailable"
+    },
+    {
+      "description": "A routing decision is requested by the heuristic router"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "The heuristic router proceeds with its own selection within 50ms regardless of scoring engine state",
+    "assertion": "truthy"
+  },
+  "verificationMethod": {
+    "type": "unit-test",
+    "testFile": "src/core/scoring-integration.test.ts",
+    "testName": "advisory timeout enforcement at 50ms"
+  },
+  "referencedComponents": [
+    "ResonantShellState.providerRouting"
+  ],
+  "createdAt": "2025-07-14T00:00:00Z",
+  "updatedAt": "2025-07-14T00:00:00Z"
+}

@@ -1,0 +1,33 @@
+{
+  "contractId": "atomic-config-apply",
+  "version": "1.0.0",
+  "phase": 8,
+  "description": "Configuration application is atomic — either ALL settings are applied successfully or NONE are (no partial configuration state)",
+  "category": "correctness",
+  "property": "For any ConfigurationProfile application, either ALL settings are applied successfully or NONE are (no partial configuration state)",
+  "invariants": [
+    {
+      "id": "all-or-nothing",
+      "description": "On success, both config.json and .onboarding_complete marker must exist. On failure, neither should exist (or state is unchanged).",
+      "assertion": "(success && config_exists && marker_exists) || (!success && (!config_exists || !marker_exists))"
+    },
+    {
+      "id": "config-matches-input",
+      "description": "On success, the written config.json must deserialize to a profile matching the input",
+      "assertion": "success implies deserialize(read(config.json)).hardware_class == input.hardware_class"
+    },
+    {
+      "id": "temp-file-cleanup",
+      "description": "No temporary files remain after application (success or failure)",
+      "assertion": "!exists(config.json.tmp)"
+    }
+  ],
+  "testStrategy": "property-based",
+  "triggerConditions": [
+    "config-apply",
+    "onboarding-complete",
+    "manual-trigger"
+  ],
+  "failureAction": "block-merge",
+  "relatedRequirements": ["1.6"]
+}

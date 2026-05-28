@@ -1,0 +1,27 @@
+{
+  "id": "contract-rl-model-versioned",
+  "version": "1.0.0",
+  "description": "Every successful training job produces a versioned model record persisted in the model_versions table",
+  "category": "rl-policy",
+  "preconditions": [
+    {
+      "description": "A training job completes successfully with ONNX export"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "A new ModelVersion record is inserted with all required fields and is_active = true",
+    "assertion": "truthy"
+  },
+  "verificationMethod": {
+    "type": "unit-test",
+    "testFile": "src/core/rl-behavioral-contracts.test.ts",
+    "testName": "model versions persisted after training"
+  },
+  "referencedComponents": [
+    "ModelVersion",
+    "TrainingJob",
+    "ONNXExporter"
+  ],
+  "createdAt": "2025-07-14T00:00:00Z",
+  "updatedAt": "2025-07-14T00:00:00Z"
+}

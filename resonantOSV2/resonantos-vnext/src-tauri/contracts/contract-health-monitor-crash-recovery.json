@@ -1,0 +1,10 @@
+{
+  "contractId": "contract-health-monitor-crash-recovery",
+  "version": "1.0.0",
+  "description": "Health monitor watchdog restarts probe loop if no cycle completes within 3× configured interval, and logs crash recovery events",
+  "property": "Property 3: For any provider route with rolling average avg and any new probe latency lat, a DegradationEvent with severity latency-spike SHALL be emitted if and only if lat > 2 × avg and avg > 0",
+  "validatesRequirements": ["3.4", "3.5"],
+  "testStrategy": "proptest",
+  "testLocation": "src-tauri/src/health_monitor.rs",
+  "enforcedBy": "cargo test"
+}

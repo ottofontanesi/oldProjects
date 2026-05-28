@@ -1,0 +1,10 @@
+{
+  "contractId": "contract-health-monitor-degradation-notification",
+  "version": "1.0.0",
+  "description": "Shell notification contains all required fields on degradation — provider_profile_id, severity, and fallback_route_id when available",
+  "property": "Property 5: For any DegradationEvent, the emitted shell notification SHALL contain non-empty values for provider_profile_id, severity (one of latency-spike, error-response, unavailable), and fallback_route_id (if a fallback exists in the policy chain)",
+  "validatesRequirements": ["2.4"],
+  "testStrategy": "proptest",
+  "testLocation": "src-tauri/src/health_monitor.rs",
+  "enforcedBy": "cargo test"
+}

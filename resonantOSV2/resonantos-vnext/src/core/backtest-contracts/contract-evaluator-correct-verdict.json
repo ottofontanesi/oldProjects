@@ -1,0 +1,27 @@
+{
+  "id": "contract-evaluator-correct-verdict",
+  "version": "1.0.0",
+  "description": "Candidate verdicts are correctly classified based on delta thresholds: 'promising' when better on 2+ dimensions, 'comparable' when within 10%, 'inferior' when worse on 2+ dimensions.",
+  "category": "agent-evaluator",
+  "preconditions": [
+    {
+      "description": "A set of TaskDelta values is computed from benchmark results"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "computeVerdict returns the correct classification based on the 10% threshold and dimension counting rules.",
+    "assertion": "truthy"
+  },
+  "verificationMethod": {
+    "type": "property-test",
+    "testFile": "src/core/agent-evaluator-verdict.test.ts",
+    "testName": "Property 4: Verdict classification correctness"
+  },
+  "referencedComponents": [
+    "computeVerdict",
+    "CandidateVerdict",
+    "AggregateScores"
+  ],
+  "createdAt": "2025-07-20T00:00:00Z",
+  "updatedAt": "2025-07-20T00:00:00Z"
+}

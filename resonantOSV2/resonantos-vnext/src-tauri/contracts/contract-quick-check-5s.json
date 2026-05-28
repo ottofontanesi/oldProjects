@@ -1,0 +1,32 @@
+{
+  "contractId": "quick-check-5s",
+  "version": "1.0.0",
+  "phase": 8,
+  "description": "Startup quick check completes within 5 seconds and does not block the shell from becoming interactive",
+  "category": "performance",
+  "property": "For any hardware configuration, runQuickCheck SHALL complete within 5 seconds",
+  "invariants": [
+    {
+      "id": "quick-check-time-bound",
+      "description": "Total quick check execution time must not exceed 5000ms",
+      "assertion": "quick_check.duration_ms <= 5000"
+    },
+    {
+      "id": "non-blocking",
+      "description": "Quick check runs asynchronously and does not block the main thread or shell initialization",
+      "assertion": "shell_interactive_before_quick_check_complete == true"
+    },
+    {
+      "id": "critical-checks-only",
+      "description": "Quick check only runs critical-severity checks (credential reachable, disk space, hardware match)",
+      "assertion": "quick_check.checks_run <= critical_check_count"
+    }
+  ],
+  "testStrategy": "property-based",
+  "triggerConditions": [
+    "startup",
+    "manual-trigger"
+  ],
+  "failureAction": "block-merge",
+  "relatedRequirements": ["7.1", "7.2"]
+}

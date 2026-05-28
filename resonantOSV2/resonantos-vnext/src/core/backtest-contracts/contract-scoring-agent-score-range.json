@@ -1,0 +1,28 @@
+{
+  "id": "contract-scoring-agent-score-range",
+  "version": "1.0.0",
+  "description": "Agent scores produced by the scoring engine are always in the range [0.0, 1.0]",
+  "category": "provider-routing",
+  "preconditions": [
+    {
+      "description": "A DelegationPacket is submitted for routing with at least one candidate agent"
+    },
+    {
+      "description": "Scoring weights are valid (sum to 1.0) and factor scores are normalized to [0.0, 1.0]"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "Every ScoredAgent in the ScoringRecommendation has an agentScore in [0.0, 1.0]",
+    "assertion": "truthy"
+  },
+  "verificationMethod": {
+    "type": "unit-test",
+    "testFile": "src/core/scoring-engine.test.ts",
+    "testName": "Property 1: Weighted linear formula correctness"
+  },
+  "referencedComponents": [
+    "ResonantShellState.providerRouting"
+  ],
+  "createdAt": "2025-07-14T00:00:00Z",
+  "updatedAt": "2025-07-14T00:00:00Z"
+}

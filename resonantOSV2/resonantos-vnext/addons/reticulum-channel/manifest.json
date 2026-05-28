@@ -1,0 +1,31 @@
+{
+  "id": "reticulum-channel",
+  "name": "Reticulum Mesh Channel",
+  "version": "0.1.0",
+  "category": "channel",
+  "runtimeType": "channel-addon",
+  "capabilities": ["chat-interface", "notifications", "device-integration"],
+  "localService": {
+    "protocol": "stdio-json-rpc",
+    "entrypoint": "python3 sidecar/main.py",
+    "healthCheck": {
+      "method": "ping",
+      "intervalSecs": 30
+    }
+  },
+  "settings": {
+    "identityLabel": {
+      "type": "string",
+      "default": "ResonantOS",
+      "description": "Display name shown to peers on the Reticulum mesh"
+    },
+    "bandwidthProfiles": {
+      "type": "object",
+      "description": "Per-transport bandwidth limits and summarization settings"
+    },
+    "transportConfig": {
+      "type": "object",
+      "description": "Transport interface configuration (TCP, LoRa, serial, I2P)"
+    }
+  }
+}

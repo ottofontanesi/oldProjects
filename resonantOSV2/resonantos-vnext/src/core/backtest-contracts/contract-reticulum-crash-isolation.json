@@ -1,0 +1,31 @@
+{
+  "id": "contract-reticulum-crash-isolation",
+  "version": "1.0.0",
+  "description": "Sidecar crash does not propagate errors to host shell. When the Python sidecar process crashes, the error is contained within the Reticulum channel service and does not affect the Tauri main thread or other services.",
+  "category": "recovery-mode",
+  "preconditions": [
+    {
+      "description": "Reticulum sidecar process is running"
+    },
+    {
+      "description": "Sidecar process exits unexpectedly (crash)"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "Health state transitions to 'crashed', shell notification is emitted, but no panic or error propagates to the host process or other channels",
+    "assertion": "matches-schema",
+    "expected": {
+      "healthState": "crashed",
+      "hostProcessStable": true,
+      "otherChannelsUnaffected": true
+    }
+  },
+  "verificationMethod": {
+    "type": "unit-test",
+    "testFile": "src-tauri/src/reticulum_channel_proptest.rs",
+    "testName": "proptest_degradation::prop_channel_isolation"
+  },
+  "referencedComponents": ["reticulumChannelService", "sidecarHealthState"],
+  "createdAt": "2025-01-01T00:00:00Z",
+  "updatedAt": "2025-01-01T00:00:00Z"
+}

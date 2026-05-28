@@ -1,0 +1,26 @@
+{
+  "id": "contract-rl-training-gx10-only",
+  "version": "1.0.0",
+  "description": "Training jobs execute only on the GX10 node via Compute Fabric, never on the Desktop local node",
+  "category": "rl-policy",
+  "preconditions": [
+    {
+      "description": "A training job is submitted via the Compute Fabric"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "The ComputeJob targets compute-gx10 node with container-runner role",
+    "assertion": "truthy"
+  },
+  "verificationMethod": {
+    "type": "unit-test",
+    "testFile": "src/core/rl-behavioral-contracts.test.ts",
+    "testName": "training jobs target GX10 only"
+  },
+  "referencedComponents": [
+    "ComputeFabric",
+    "RLComputeIntegration"
+  ],
+  "createdAt": "2025-07-14T00:00:00Z",
+  "updatedAt": "2025-07-14T00:00:00Z"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "contract-reticulum-delivery-ack",
+  "version": "1.0.0",
+  "description": "Delivery acknowledgements update status correctly. Delivery state transitions through exactly one valid path: pending->complete, pending->delivery-unconfirmed, or pending->failed.",
+  "category": "state-normalization",
+  "preconditions": [
+    {
+      "description": "A delivery state record exists with status 'pending'"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "After a delivery event, the status transitions to exactly one terminal state and remains there",
+    "assertion": "matches-schema",
+    "expected": {
+      "validTerminalStates": ["complete", "delivery-unconfirmed", "failed"],
+      "terminalStatesAreFinal": true
+    }
+  },
+  "verificationMethod": {
+    "type": "unit-test",
+    "testFile": "src-tauri/src/reticulum_channel_proptest.rs",
+    "testName": "proptest_outbound::prop_delivery_state_machine_valid_transitions"
+  },
+  "referencedComponents": ["reticulumChannelService", "deliveryState"],
+  "createdAt": "2025-01-01T00:00:00Z",
+  "updatedAt": "2025-01-01T00:00:00Z"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "contract-reticulum-outbound-serialization",
+  "version": "1.0.0",
+  "description": "Outbound messages correctly serialized to JSON-RPC requests. For any valid outbound message, serializing to JSON-RPC send_message and parsing in the sidecar produces identical content.",
+  "category": "state-normalization",
+  "preconditions": [
+    {
+      "description": "A valid outbound message with non-empty destination_hash, non-empty content, and valid priority"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "The JSON-RPC send_message request preserves destination_hash, content, and priority through serialization round-trip",
+    "assertion": "equals",
+    "expected": {
+      "roundTripPreserves": ["destination_hash", "content", "priority"]
+    }
+  },
+  "verificationMethod": {
+    "type": "unit-test",
+    "testFile": "src-tauri/src/reticulum_channel_proptest.rs",
+    "testName": "proptest_outbound::prop_outbound_serialization_roundtrip"
+  },
+  "referencedComponents": ["reticulumChannelService", "jsonRpcProtocol"],
+  "createdAt": "2025-01-01T00:00:00Z",
+  "updatedAt": "2025-01-01T00:00:00Z"
+}

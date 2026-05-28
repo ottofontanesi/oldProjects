@@ -1,0 +1,26 @@
+{
+  "id": "contract-evaluator-zero-tokens",
+  "version": "1.0.0",
+  "description": "Evaluation activities add zero tokens to agent prompts. All evaluation runs as background ComputeJobs, never consuming context window tokens.",
+  "category": "agent-evaluator",
+  "preconditions": [
+    {
+      "description": "The Agent Evaluator is performing discovery, benchmarking, or evaluation"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "All evaluation workloads are submitted as ComputeJobs to the Compute Fabric. No evaluation activity modifies active agent prompts or context windows.",
+    "assertion": "truthy"
+  },
+  "verificationMethod": {
+    "type": "unit-test",
+    "testFile": "src/core/agent-evaluator-sandbox.test.ts",
+    "testName": "creates job with correct jobType and roles"
+  },
+  "referencedComponents": [
+    "createSandboxJobSpec",
+    "createDiscoveryPollingJob"
+  ],
+  "createdAt": "2025-07-20T00:00:00Z",
+  "updatedAt": "2025-07-20T00:00:00Z"
+}

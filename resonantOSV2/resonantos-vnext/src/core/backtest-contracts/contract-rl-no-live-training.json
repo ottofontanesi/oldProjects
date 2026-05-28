@@ -1,0 +1,26 @@
+{
+  "id": "contract-rl-no-live-training",
+  "version": "1.0.0",
+  "description": "Training never occurs during live task execution — it runs as a background ComputeJob on a separate node",
+  "category": "rl-policy",
+  "preconditions": [
+    {
+      "description": "The Desktop local node is handling live task delegations"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "No training computation occurs on the Desktop node; only inference (forward pass) runs locally",
+    "assertion": "truthy"
+  },
+  "verificationMethod": {
+    "type": "unit-test",
+    "testFile": "src/core/rl-behavioral-contracts.test.ts",
+    "testName": "no live training on desktop"
+  },
+  "referencedComponents": [
+    "RLInferenceService",
+    "RLComputeIntegration"
+  ],
+  "createdAt": "2025-07-14T00:00:00Z",
+  "updatedAt": "2025-07-14T00:00:00Z"
+}
