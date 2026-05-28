@@ -1,0 +1,28 @@
+{
+  "id": "contract-scoring-background-thread",
+  "version": "1.0.0",
+  "description": "Scoring computation runs on a background thread separate from the main thread and render thread",
+  "category": "provider-routing",
+  "preconditions": [
+    {
+      "description": "The scoring engine is invoked as part of the advisory integration in provider-service"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "Scoring runs asynchronously without blocking the Tauri main thread or the frontend render thread, maintaining sub-100ms shell responsiveness",
+    "assertion": "truthy"
+  },
+  "verificationMethod": {
+    "type": "smoke",
+    "steps": [
+      "Trigger a scoring computation via the advisory integration path",
+      "Verify the main thread event loop is not blocked during scoring",
+      "Verify UI interactions remain responsive (sub-100ms) while scoring runs"
+    ]
+  },
+  "referencedComponents": [
+    "ResonantShellState.providerRouting"
+  ],
+  "createdAt": "2025-07-14T00:00:00Z",
+  "updatedAt": "2025-07-14T00:00:00Z"
+}

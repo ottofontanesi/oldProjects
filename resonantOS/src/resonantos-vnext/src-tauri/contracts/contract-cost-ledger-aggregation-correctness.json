@@ -1,0 +1,10 @@
+{
+  "contractId": "contract-cost-ledger-aggregation-correctness",
+  "version": "1.0.0",
+  "description": "Cost aggregation correctness — aggregation totals match sum of individual records for each (period, agent_id, task_type) tuple",
+  "property": "Property 7: For any set of CostRecord entries, the CostAggregation for a given (period, agent_id, task_type) tuple SHALL have total_tokens equal to the sum of total_tokens across all matching records, and record_count equal to the count of matching records",
+  "validatesRequirements": ["4.1", "4.4"],
+  "testStrategy": "proptest",
+  "testLocation": "src-tauri/src/cost_ledger_service.rs",
+  "enforcedBy": "cargo test"
+}

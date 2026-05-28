@@ -1,0 +1,28 @@
+{
+  "id": "contract-provider-routing-primary-healthy",
+  "version": "1.0.0",
+  "description": "Provider routing resolves to primary when healthy",
+  "category": "provider-routing",
+  "preconditions": [
+    {
+      "description": "Default state with all providers healthy"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "resolveProviderRoute returns primary-healthy resolution",
+    "assertion": "equals",
+    "expected": { "resolutionReason": "primary-healthy" }
+  },
+  "verificationMethod": {
+    "type": "unit-test",
+    "testFile": "src/core/policies.test.ts",
+    "testName": "resolves a primary provider runtime node when a healthy route exists"
+  },
+  "referencedComponents": [
+    "ResonantShellState.providers",
+    "ResonantShellState.runtimeNodes",
+    "ResonantShellState.providerRouting"
+  ],
+  "createdAt": "2026-06-01T00:00:00.000Z",
+  "updatedAt": "2026-06-01T00:00:00.000Z"
+}

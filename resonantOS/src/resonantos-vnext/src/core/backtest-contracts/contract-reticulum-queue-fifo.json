@@ -1,0 +1,29 @@
+{
+  "id": "contract-reticulum-queue-fifo",
+  "version": "1.0.0",
+  "description": "Message queuing preserves FIFO order. For any sequence of enqueued messages to the same destination, messages are transmitted in the exact order they were enqueued.",
+  "category": "state-normalization",
+  "preconditions": [
+    {
+      "description": "Message queue is initialized and empty"
+    },
+    {
+      "description": "Multiple messages are enqueued to the same destination with sequential timestamps"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "Dequeuing messages returns them in FIFO order (earliest queued_at first), with high-priority messages taking precedence",
+    "assertion": "equals",
+    "expected": {
+      "ordering": "FIFO by queued_at within same priority, high priority before normal"
+    }
+  },
+  "verificationMethod": {
+    "type": "unit-test",
+    "testFile": "src-tauri/src/reticulum_channel_proptest.rs",
+    "testName": "proptest_queue::prop_queue_fifo_ordering"
+  },
+  "referencedComponents": ["reticulumChannelService", "messageQueue"],
+  "createdAt": "2025-01-01T00:00:00Z",
+  "updatedAt": "2025-01-01T00:00:00Z"
+}

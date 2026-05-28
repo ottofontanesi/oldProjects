@@ -1,0 +1,27 @@
+{
+  "id": "contract-evaluator-logician-artifacts",
+  "version": "1.0.0",
+  "description": "Logician_Execution_Artifacts are produced for all evaluation activities including discovery runs, benchmark executions, and comparative analyses.",
+  "category": "agent-evaluator",
+  "preconditions": [
+    {
+      "description": "An evaluation activity (discovery, benchmark, or comparison) completes"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "A Logician_Execution_Artifact is produced with appropriate kind ('benchmark-eval' or 'evaluation-summary'), status, and evidence fields.",
+    "assertion": "truthy"
+  },
+  "verificationMethod": {
+    "type": "unit-test",
+    "testFile": "src/core/agent-evaluator-sandbox.test.ts",
+    "testName": "Tool Call Capture"
+  },
+  "referencedComponents": [
+    "executeBenchmarkSuite",
+    "MonthlySummaryArtifact",
+    "BenchmarkRun"
+  ],
+  "createdAt": "2025-07-20T00:00:00Z",
+  "updatedAt": "2025-07-20T00:00:00Z"
+}

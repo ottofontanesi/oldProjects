@@ -1,0 +1,33 @@
+{
+  "id": "contract-reticulum-bandwidth-limit",
+  "version": "1.0.0",
+  "description": "Bandwidth-aware summarization produces responses within size limit. shouldSummarize returns true iff response byte length exceeds maxMessageBytes AND requiresSummarization is true for the active transport profile.",
+  "category": "state-normalization",
+  "preconditions": [
+    {
+      "description": "Bandwidth profiles are configured for each transport type"
+    },
+    {
+      "description": "A Strategist response is generated for a Reticulum channel thread"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "shouldSummarize correctly identifies when summarization is needed based on transport profile constraints",
+    "assertion": "matches-schema",
+    "expected": {
+      "triggerCondition": "responseLength > maxMessageBytes AND requiresSummarization == true",
+      "defaultProfiles": {
+        "lora": { "maxBytes": 500, "summarize": true },
+        "tcp": { "maxBytes": 32000, "summarize": false }
+      }
+    }
+  },
+  "verificationMethod": {
+    "type": "unit-test",
+    "testFile": "src/core/reticulum-channel-bandwidth.test.ts",
+    "testName": "Property 7: Bandwidth-aware summarization trigger"
+  },
+  "referencedComponents": ["reticulumChannel", "bandwidthProfile"],
+  "createdAt": "2025-01-01T00:00:00Z",
+  "updatedAt": "2025-01-01T00:00:00Z"
+}

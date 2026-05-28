@@ -1,0 +1,43 @@
+{
+  "contractId": "hardware-no-crash-on-exhaustion",
+  "version": "1.0.0",
+  "phase": 7,
+  "description": "The system never crashes or hangs due to resource exhaustion — all limits result in graceful degradation",
+  "category": "resilience",
+  "property": "For any resource exhaustion scenario, the system SHALL apply graceful degradation (queuing, model downgrade, or timeout) rather than process termination",
+  "invariants": [
+    {
+      "id": "oom-prevention",
+      "description": "When memory limit is approached, backpressure is applied instead of OOM",
+      "assertion": "on_memory_pressure => queue_requests && !crash"
+    },
+    {
+      "id": "vram-exhaustion-handled",
+      "description": "When VRAM is exhausted, new loads are blocked and eviction is attempted",
+      "assertion": "on_vram_pressure => block_new_loads && attempt_eviction && !crash"
+    },
+    {
+      "id": "thermal-critical-handled",
+      "description": "When thermal state is critical, workloads are paused rather than crashing",
+      "assertion": "on_thermal_critical => pause_background && limit_concurrent && !crash"
+    },
+    {
+      "id": "timeout-not-hang",
+      "description": "All operations have finite timeouts — no operation can hang indefinitely",
+      "assertion": "all_operations.timeout_ms > 0 && all_operations.timeout_ms < infinity"
+    },
+    {
+      "id": "adaptation-recovery",
+      "description": "After adaptation is applied, system recovers when condition clears",
+      "assertion": "on_condition_cleared => restore_original_state within 30s"
+    }
+  ],
+  "testStrategy": "property-based",
+  "triggerConditions": [
+    "code-change-in-adaptation",
+    "code-change-in-resource-management",
+    "regression-suite"
+  ],
+  "failureAction": "block-merge",
+  "relatedRequirements": ["8.4", "8.3"]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "contract-state-normalization-legacy-migration",
+  "version": "1.0.0",
+  "description": "State normalization produces a valid ResonantShellState from legacy persisted state",
+  "category": "state-normalization",
+  "preconditions": [
+    {
+      "description": "A persisted state object missing newer fields (e.g., modelStrategy, computeFabric)"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "Normalized state contains all required top-level keys with valid defaults",
+    "assertion": "matches-schema",
+    "expected": null
+  },
+  "verificationMethod": {
+    "type": "smoke",
+    "steps": ["boot-state", "state-normalization"]
+  },
+  "referencedComponents": [
+    "ResonantShellState.modelStrategy",
+    "ResonantShellState.computeFabric",
+    "ResonantShellState.providerRouting"
+  ],
+  "createdAt": "2026-06-01T00:00:00.000Z",
+  "updatedAt": "2026-06-01T00:00:00.000Z"
+}

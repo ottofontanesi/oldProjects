@@ -1,0 +1,10 @@
+{
+  "contractId": "contract-federated-memory-query-filtering",
+  "version": "1.0.0",
+  "description": "Query filtering returns only matching facts — results satisfy all active filter criteria and are sorted by timestamp descending",
+  "property": "Property 14: For any combination of query filters (category, source_agent, min_confidence, max_age_seconds) and for any set of stored facts, every returned FactRecord SHALL satisfy all active filter criteria, and the results SHALL be sorted by timestamp descending",
+  "validatesRequirements": ["9.1", "9.2"],
+  "testStrategy": "proptest",
+  "testLocation": "src-tauri/src/federated_memory_service.rs",
+  "enforcedBy": "cargo test"
+}

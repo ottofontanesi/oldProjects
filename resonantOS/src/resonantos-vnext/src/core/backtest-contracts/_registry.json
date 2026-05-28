@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "contracts": [
+    "contract-provider-routing-primary-healthy",
+    "contract-delegation-validation-required-fields",
+    "contract-state-normalization-legacy-migration",
+    "contract-compute-fabric-job-submission",
+    "contract-archive-access-policy-enforcement"
+  ],
+  "rebuiltAt": "2026-06-01T00:00:00.000Z"
+}

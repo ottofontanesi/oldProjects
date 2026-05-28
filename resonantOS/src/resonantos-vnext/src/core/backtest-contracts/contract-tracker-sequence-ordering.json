@@ -1,0 +1,26 @@
+{
+  "id": "contract-tracker-sequence-ordering",
+  "version": "1.0.0",
+  "description": "For any task (delegation_packet_id) with N tool calls, sequence_position values form the sequence 1, 2, 3, ..., N with no gaps and no duplicates",
+  "category": "tool-call-tracker",
+  "preconditions": [
+    {
+      "description": "Multiple tool calls are logged for the same delegation_packet_id"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "Sequence positions are monotonically increasing starting from 1 with no gaps or duplicates within a single task",
+    "assertion": "truthy"
+  },
+  "verificationMethod": {
+    "type": "property-test",
+    "testFile": "src-tauri/src/tool_call_tracker_service.rs",
+    "testName": "Property 12: Sequence position monotonicity"
+  },
+  "referencedComponents": [
+    "tool_call_tracker_service::log_tool_call",
+    "tool_call_tracker_service::ToolCallTrackerState.sequence_positions"
+  ],
+  "createdAt": "2026-07-15T00:00:00Z",
+  "updatedAt": "2026-07-15T00:00:00Z"
+}

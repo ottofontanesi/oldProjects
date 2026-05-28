@@ -1,0 +1,26 @@
+{
+  "id": "contract-rl-last-known-good-maintained",
+  "version": "1.0.0",
+  "description": "Exactly zero or one model version has is_last_known_good = true at any time, updated only when a version passes evaluation",
+  "category": "rl-policy",
+  "preconditions": [
+    {
+      "description": "Model versions exist in the registry"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "At most one ModelVersion has is_last_known_good = true, and it only changes when a new version passes evaluation without rollback",
+    "assertion": "truthy"
+  },
+  "verificationMethod": {
+    "type": "unit-test",
+    "testFile": "src/core/rl-behavioral-contracts.test.ts",
+    "testName": "last known good invariant maintained"
+  },
+  "referencedComponents": [
+    "ModelVersion",
+    "RLInferenceService"
+  ],
+  "createdAt": "2025-07-14T00:00:00Z",
+  "updatedAt": "2025-07-14T00:00:00Z"
+}

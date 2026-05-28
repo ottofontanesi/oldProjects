@@ -1,0 +1,28 @@
+{
+  "id": "contract-scoring-experience-buffer-persistence",
+  "version": "1.0.0",
+  "description": "Every scoring decision is logged to the Experience Buffer as an ExperienceRecord",
+  "category": "provider-routing",
+  "preconditions": [
+    {
+      "description": "The scoring engine produces a ScoringRecommendation for a DelegationPacket"
+    },
+    {
+      "description": "The Experience Buffer database is accessible"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "An ExperienceRecord is persisted containing the DelegationPacket ID, recommendation, heuristic decision, and acceptance status",
+    "assertion": "truthy"
+  },
+  "verificationMethod": {
+    "type": "unit-test",
+    "testFile": "src/core/scoring-integration.test.ts",
+    "testName": "end-to-end scoring flow logs experience record"
+  },
+  "referencedComponents": [
+    "ResonantShellState.providerRouting"
+  ],
+  "createdAt": "2025-07-14T00:00:00Z",
+  "updatedAt": "2025-07-14T00:00:00Z"
+}

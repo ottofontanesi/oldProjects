@@ -1,0 +1,33 @@
+{
+  "contractId": "hardware-detection-5s",
+  "version": "1.0.0",
+  "phase": 7,
+  "description": "Hardware detection completes within 5 seconds on any supported machine",
+  "category": "performance",
+  "property": "For any supported hardware configuration, detect_hardware() SHALL populate all required fields in HardwareProfile within 5 seconds",
+  "invariants": [
+    {
+      "id": "detection-time-bound",
+      "description": "Total detection time must not exceed 5000ms",
+      "assertion": "detect_hardware.elapsed_ms <= 5000"
+    },
+    {
+      "id": "individual-probe-timeout",
+      "description": "Each individual detector must timeout after 2000ms",
+      "assertion": "each detector.elapsed_ms <= 2000"
+    },
+    {
+      "id": "required-fields-populated",
+      "description": "All required fields in HardwareProfile must be non-null after detection",
+      "assertion": "profile.cpu != null && profile.memory != null && profile.storage != null && profile.network != null && profile.hardware_class != null"
+    }
+  ],
+  "testStrategy": "property-based",
+  "triggerConditions": [
+    "startup",
+    "hardware-change-detected",
+    "manual-trigger"
+  ],
+  "failureAction": "block-merge",
+  "relatedRequirements": ["1.6", "1.7"]
+}

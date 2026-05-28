@@ -1,0 +1,27 @@
+{
+  "id": "contract-rl-rollback-on-degradation",
+  "version": "1.0.0",
+  "description": "Automatic rollback triggers when a new model version underperforms the previous version during evaluation window",
+  "category": "rl-policy",
+  "preconditions": [
+    {
+      "description": "A new model version is deployed and evaluation window tracking is active"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "When new version acceptance rate OR avg logician score is lower than previous, rollback to last_known_good occurs",
+    "assertion": "truthy"
+  },
+  "verificationMethod": {
+    "type": "unit-test",
+    "testFile": "src/core/rl-behavioral-contracts.test.ts",
+    "testName": "rollback on model degradation"
+  },
+  "referencedComponents": [
+    "ModelVersion",
+    "RLInferenceService.evaluate_model_version",
+    "RLInferenceService.rollback_model"
+  ],
+  "createdAt": "2025-07-14T00:00:00Z",
+  "updatedAt": "2025-07-14T00:00:00Z"
+}

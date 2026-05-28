@@ -1,0 +1,26 @@
+{
+  "id": "contract-compute-fabric-job-submission",
+  "version": "1.0.0",
+  "description": "Compute fabric accepts safe-command jobs on enrolled nodes with correct constraints",
+  "category": "compute-fabric",
+  "preconditions": [
+    {
+      "description": "At least one enrolled compute node with safe-command-runner role"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "Job is created with status 'queued' and correct node role requirements",
+    "assertion": "equals",
+    "expected": { "status": "queued", "requiredNodeRoles": ["safe-command-runner"] }
+  },
+  "verificationMethod": {
+    "type": "unit-test",
+    "testFile": "src/core/compute-fabric.test.ts",
+    "testName": "creates a safe-command job with correct constraints"
+  },
+  "referencedComponents": [
+    "ResonantShellState.computeFabric"
+  ],
+  "createdAt": "2026-06-01T00:00:00.000Z",
+  "updatedAt": "2026-06-01T00:00:00.000Z"
+}

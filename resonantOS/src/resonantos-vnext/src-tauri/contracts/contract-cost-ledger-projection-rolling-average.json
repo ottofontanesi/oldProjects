@@ -1,0 +1,10 @@
+{
+  "contractId": "contract-cost-ledger-projection-rolling-average",
+  "version": "1.0.0",
+  "description": "Monthly projection uses 7-day rolling average — projected_monthly_usd equals (sum_of_daily_totals / 7) × 30.44",
+  "property": "Property 8: For any set of daily cost totals over the last 7 days, the projected_monthly_usd SHALL equal (sum_of_daily_totals / 7) × 30.44, and daily_average_usd SHALL equal sum_of_daily_totals / 7",
+  "validatesRequirements": ["5.3"],
+  "testStrategy": "proptest",
+  "testLocation": "src-tauri/src/cost_ledger_service.rs",
+  "enforcedBy": "cargo test"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "contract-tracker-zero-tokens",
+  "version": "1.0.0",
+  "description": "The tool call tracker adds zero tokens to agent prompts, zero latency to tool execution, and zero API calls; it is completely passive and operates only on the return path after tool execution",
+  "category": "tool-call-tracker",
+  "preconditions": [
+    {
+      "description": "The tool call tracker is active and logging tool calls"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "No additional tokens are injected into agent context, no additional API calls are made, and tool execution latency is unaffected (logging is fire-and-forget)",
+    "assertion": "truthy"
+  },
+  "verificationMethod": {
+    "type": "architectural-review",
+    "testFile": "src-tauri/src/tool_call_tracker_service.rs",
+    "testName": "Architecture: zero-token passive design"
+  },
+  "referencedComponents": [
+    "tool_call_tracker_service::log_tool_call",
+    "tool_call_tracker_service::integrate_logging_interceptor"
+  ],
+  "createdAt": "2026-07-15T00:00:00Z",
+  "updatedAt": "2026-07-15T00:00:00Z"
+}

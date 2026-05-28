@@ -1,0 +1,27 @@
+{
+  "id": "contract-reticulum-channel-isolation",
+  "version": "1.0.0",
+  "description": "Channel removal does not affect other channels. For any state of the Reticulum channel (running, offline, crashed, disabled), desktop, telegram, and voice channels continue operating without degradation.",
+  "category": "state-normalization",
+  "preconditions": [
+    {
+      "description": "Reticulum channel is in any valid state (running, starting, offline, crashed)"
+    },
+    {
+      "description": "Other channels (desktop, telegram, voice) are operational"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "Other channels remain fully operational regardless of Reticulum channel state changes, including disable/remove",
+    "assertion": "truthy",
+    "expected": true
+  },
+  "verificationMethod": {
+    "type": "unit-test",
+    "testFile": "src-tauri/src/reticulum_channel_proptest.rs",
+    "testName": "proptest_degradation::prop_channel_isolation"
+  },
+  "referencedComponents": ["reticulumChannelService", "channelRegistry"],
+  "createdAt": "2025-01-01T00:00:00Z",
+  "updatedAt": "2025-01-01T00:00:00Z"
+}

@@ -1,0 +1,213 @@
+{
+  "title": "Reticulum Channel JSON-RPC Protocol",
+  "description": "JSON Schema definitions for the stdio-json-rpc protocol between the Rust host and the Python Reticulum sidecar.",
+  "definitions": {
+    "JsonRpcRequest": {
+      "type": "object",
+      "required": ["jsonrpc", "id", "method"],
+      "properties": {
+        "jsonrpc": { "const": "2.0" },
+        "id": { "type": ["string", "number"] },
+        "method": { "type": "string" },
+        "params": { "type": "object" }
+      }
+    },
+    "JsonRpcResponse": {
+      "type": "object",
+      "required": ["jsonrpc", "id"],
+      "properties": {
+        "jsonrpc": { "const": "2.0" },
+        "id": { "type": ["string", "number"] },
+        "result": {},
+        "error": {
+          "type": "object",
+          "properties": {
+            "code": { "type": "number" },
+            "message": { "type": "string" },
+            "data": {}
+          },
+          "required": ["code", "message"]
+        }
+      }
+    },
+    "JsonRpcNotification": {
+      "type": "object",
+      "required": ["jsonrpc", "method", "params"],
+      "properties": {
+        "jsonrpc": { "const": "2.0" },
+        "method": { "type": "string" },
+        "params": { "type": "object" }
+      }
+    },
+    "requests": {
+      "start": {
+        "type": "object",
+        "properties": {
+          "method": { "const": "start" },
+          "params": {
+            "type": "object",
+            "required": ["configPath", "identityLabel"],
+            "properties": {
+              "configPath": { "type": "string", "description": "Path to ~/.reticulum/config" },
+              "identityLabel": { "type": "string", "description": "Display name for LXMF (default: ResonantOS)" }
+            }
+          }
+        }
+      },
+      "stop": {
+        "type": "object",
+        "properties": {
+          "method": { "const": "stop" },
+          "params": { "type": "object", "properties": {} }
+        }
+      },
+      "send_message": {
+        "type": "object",
+        "properties": {
+          "method": { "const": "send_message" },
+          "params": {
+            "type": "object",
+            "required": ["destination_hash", "content", "priority"],
+            "properties": {
+              "destination_hash": { "type": "string", "description": "Hex-encoded Reticulum destination hash" },
+              "content": { "type": "string", "description": "Message text content" },
+              "priority": { "type": "string", "enum": ["normal", "high"], "description": "Message priority level" }
+            }
+          }
+        }
+      },
+      "get_status": {
+        "type": "object",
+        "properties": {
+          "method": { "const": "get_status" },
+          "params": { "type": "object", "properties": {} }
+        }
+      },
+      "list_peers": {
+        "type": "object",
+        "properties": {
+          "method": { "const": "list_peers" },
+          "params": { "type": "object", "properties": {} }
+        }
+      },
+      "ping": {
+        "type": "object",
+        "properties": {
+          "method": { "const": "ping" },
+          "params": { "type": "object", "properties": {} }
+        }
+      }
+    },
+    "responses": {
+      "start": {
+        "type": "object",
+        "required": ["destination_hash", "active_interfaces"],
+        "properties": {
+          "destination_hash": { "type": "string" },
+          "active_interfaces": { "type": "array", "items": { "type": "string" } }
+        }
+      },
+      "send_message": {
+        "type": "object",
+        "required": ["message_id", "queued"],
+        "properties": {
+          "message_id": { "type": "string" },
+          "queued": { "type": "boolean" }
+        }
+      },
+      "get_status": {
+        "type": "object",
+        "required": ["state", "destination_hash", "active_interfaces", "peers_count", "queued_messages"],
+        "properties": {
+          "state": { "type": "string", "enum": ["running", "starting", "offline"] },
+          "destination_hash": { "type": "string" },
+          "active_interfaces": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["name", "type", "active"],
+              "properties": {
+                "name": { "type": "string" },
+                "type": { "type": "string", "enum": ["tcp", "lora", "serial", "i2p", "auto"] },
+                "active": { "type": "boolean" },
+                "error": { "type": ["string", "null"] }
+              }
+            }
+          },
+          "peers_count": { "type": "number" },
+          "queued_messages": { "type": "number" }
+        }
+      },
+      "list_peers": {
+        "type": "object",
+        "required": ["peers"],
+        "properties": {
+          "peers": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["destination_hash", "last_seen", "link_active"],
+              "properties": {
+                "destination_hash": { "type": "string" },
+                "display_name": { "type": ["string", "null"] },
+                "last_seen": { "type": "string", "format": "date-time" },
+                "link_active": { "type": "boolean" }
+              }
+            }
+          }
+        }
+      },
+      "ping": {
+        "type": "object",
+        "required": ["pong"],
+        "properties": { "pong": { "const": true } }
+      }
+    },
+    "notifications": {
+      "message_received": {
+        "type": "object",
+        "required": ["source_hash", "content", "timestamp", "lxmf_message_id"],
+        "properties": {
+          "source_hash": { "type": "string" },
+          "source_name": { "type": ["string", "null"] },
+          "content": { "type": "string" },
+          "timestamp": { "type": "string", "format": "date-time" },
+          "lxmf_message_id": { "type": "string" }
+        }
+      },
+      "delivery_confirmed": {
+        "type": "object",
+        "required": ["message_id", "delivered_at"],
+        "properties": {
+          "message_id": { "type": "string" },
+          "delivered_at": { "type": "string", "format": "date-time" }
+        }
+      },
+      "link_established": {
+        "type": "object",
+        "required": ["destination_hash"],
+        "properties": {
+          "destination_hash": { "type": "string" },
+          "display_name": { "type": ["string", "null"] }
+        }
+      },
+      "link_lost": {
+        "type": "object",
+        "required": ["destination_hash", "reason"],
+        "properties": {
+          "destination_hash": { "type": "string" },
+          "reason": { "type": "string" }
+        }
+      },
+      "error": {
+        "type": "object",
+        "required": ["code", "message"],
+        "properties": {
+          "code": { "type": "string" },
+          "message": { "type": "string" },
+          "details": { "type": ["string", "null"] }
+        }
+      }
+    }
+  }
+}

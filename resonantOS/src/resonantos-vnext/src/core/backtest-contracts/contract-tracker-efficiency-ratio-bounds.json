@@ -1,0 +1,26 @@
+{
+  "id": "contract-tracker-efficiency-ratio-bounds",
+  "version": "1.0.0",
+  "description": "compute_efficiency_ratio always returns a value in [0.0, 1.0]; for non-empty traces equals useful_count / total_count; for empty traces returns exactly 1.0",
+  "category": "tool-call-tracker",
+  "preconditions": [
+    {
+      "description": "A completed task trace (possibly empty) is submitted for efficiency analysis"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "The efficiency ratio is bounded in [0.0, 1.0] and equals the formula useful/total for non-empty traces, or 1.0 for empty traces",
+    "assertion": "truthy"
+  },
+  "verificationMethod": {
+    "type": "property-test",
+    "testFile": "src-tauri/src/tool_call_analysis.rs",
+    "testName": "Property 6: Efficiency ratio bounds and formula"
+  },
+  "referencedComponents": [
+    "tool_call_analysis::compute_efficiency_ratio",
+    "tool_call_analysis::classify_tool_call"
+  ],
+  "createdAt": "2026-07-15T00:00:00Z",
+  "updatedAt": "2026-07-15T00:00:00Z"
+}

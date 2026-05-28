@@ -1,0 +1,26 @@
+{
+  "id": "contract-rl-circuit-breaker-5-failures",
+  "version": "1.0.0",
+  "description": "RL circuit breaker activates after exactly 5 consecutive inference failures and any success resets the counter",
+  "category": "rl-policy",
+  "preconditions": [
+    {
+      "description": "Circuit breaker is in closed state with consecutive_failures < 5"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "After 5 consecutive failures, is_open transitions to true. Any success resets consecutive_failures to 0.",
+    "assertion": "truthy"
+  },
+  "verificationMethod": {
+    "type": "unit-test",
+    "testFile": "src/core/rl-behavioral-contracts.test.ts",
+    "testName": "circuit breaker activates after 5 failures"
+  },
+  "referencedComponents": [
+    "RLCircuitBreakerState",
+    "RLInferenceService"
+  ],
+  "createdAt": "2025-07-14T00:00:00Z",
+  "updatedAt": "2025-07-14T00:00:00Z"
+}

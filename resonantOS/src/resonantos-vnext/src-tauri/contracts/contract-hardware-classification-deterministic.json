@@ -1,0 +1,32 @@
+{
+  "contractId": "hardware-classification-deterministic",
+  "version": "1.0.0",
+  "phase": 7,
+  "description": "Hardware classification is deterministic — same input always produces same output",
+  "category": "correctness",
+  "property": "For any HardwareProfile, classify_hardware() SHALL return the same HardwareClass when called multiple times with identical input",
+  "invariants": [
+    {
+      "id": "classification-determinism",
+      "description": "classify_hardware(profile) == classify_hardware(profile) for any profile",
+      "assertion": "classify_hardware(p) == classify_hardware(p)"
+    },
+    {
+      "id": "classification-completeness",
+      "description": "Every profile maps to exactly one of the 6 hardware classes",
+      "assertion": "result in [GpuWorkstation, CpuWorkstation, GpuServer, CpuServer, Embedded, ContainerRestricted]"
+    },
+    {
+      "id": "classification-no-side-effects",
+      "description": "Classification does not modify the input profile",
+      "assertion": "profile_before == profile_after"
+    }
+  ],
+  "testStrategy": "property-based",
+  "triggerConditions": [
+    "code-change-in-classify_hardware",
+    "regression-suite"
+  ],
+  "failureAction": "block-merge",
+  "relatedRequirements": ["2.1"]
+}

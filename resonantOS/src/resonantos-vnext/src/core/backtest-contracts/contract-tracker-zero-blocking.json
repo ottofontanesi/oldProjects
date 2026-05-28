@@ -1,0 +1,26 @@
+{
+  "id": "contract-tracker-zero-blocking",
+  "version": "1.0.0",
+  "description": "The logging interceptor (log_tool_call) never blocks the tool execution return path; it uses try_read for circuit breaker check and try_send for channel dispatch, returning immediately regardless of outcome",
+  "category": "tool-call-tracker",
+  "preconditions": [
+    {
+      "description": "A tool execution completes and log_tool_call is invoked"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "log_tool_call returns in < 5ms without awaiting any async operation; if channel is full or circuit breaker is open, the record is dropped silently",
+    "assertion": "truthy"
+  },
+  "verificationMethod": {
+    "type": "unit-test",
+    "testFile": "src-tauri/src/tool_call_tracker_service.rs",
+    "testName": "Performance: log_tool_call < 5ms"
+  },
+  "referencedComponents": [
+    "tool_call_tracker_service::log_tool_call",
+    "tool_call_tracker_service::ToolCallTrackerState"
+  ],
+  "createdAt": "2026-07-15T00:00:00Z",
+  "updatedAt": "2026-07-15T00:00:00Z"
+}

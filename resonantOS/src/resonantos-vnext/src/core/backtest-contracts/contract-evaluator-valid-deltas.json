@@ -1,0 +1,27 @@
+{
+  "id": "contract-evaluator-valid-deltas",
+  "version": "1.0.0",
+  "description": "Comparative reports contain valid deltas for all benchmark tasks. Each TaskDelta has quality, cost, speed, and efficiency delta values.",
+  "category": "agent-evaluator",
+  "preconditions": [
+    {
+      "description": "A comparative report is assembled from benchmark results"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "assembleComparativeReport produces a report with perTaskDeltas containing valid numeric deltas for every task in the evaluation.",
+    "assertion": "truthy"
+  },
+  "verificationMethod": {
+    "type": "property-test",
+    "testFile": "src/core/agent-evaluator-verdict.test.ts",
+    "testName": "Property 4: Verdict classification correctness"
+  },
+  "referencedComponents": [
+    "assembleComparativeReport",
+    "computeTaskDeltas",
+    "TaskDelta"
+  ],
+  "createdAt": "2025-07-20T00:00:00Z",
+  "updatedAt": "2025-07-20T00:00:00Z"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "contract-scoring-hard-constraint-exclusion",
+  "version": "1.0.0",
+  "description": "Agents violating hard constraints never appear in the ranked recommendations",
+  "category": "provider-routing",
+  "preconditions": [
+    {
+      "description": "A DelegationPacket specifies hard constraints (cost ceiling, capability gates, trust tier, fallback chain)"
+    },
+    {
+      "description": "At least one candidate agent violates a hard constraint"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "Violating agents appear only in excludedAgents with a non-empty reason, never in rankedAgents",
+    "assertion": "truthy"
+  },
+  "verificationMethod": {
+    "type": "unit-test",
+    "testFile": "src/core/scoring-engine.test.ts",
+    "testName": "Property 9: Hard constraint filtering correctness"
+  },
+  "referencedComponents": [
+    "ResonantShellState.providerRouting"
+  ],
+  "createdAt": "2025-07-14T00:00:00Z",
+  "updatedAt": "2025-07-14T00:00:00Z"
+}

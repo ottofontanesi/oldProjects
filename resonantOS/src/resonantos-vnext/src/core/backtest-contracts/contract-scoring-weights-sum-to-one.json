@@ -1,0 +1,25 @@
+{
+  "id": "contract-scoring-weights-sum-to-one",
+  "version": "1.0.0",
+  "description": "Scoring weight vectors always sum to 1.0 (within 0.001 tolerance)",
+  "category": "provider-routing",
+  "preconditions": [
+    {
+      "description": "A ScoringWeights configuration is provided or loaded from defaults"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "qualityWeight + costWeight + speedWeight + availabilityWeight equals 1.0 within 0.001",
+    "assertion": "truthy"
+  },
+  "verificationMethod": {
+    "type": "unit-test",
+    "testFile": "src/core/scoring-engine.test.ts",
+    "testName": "Property 3: Scoring weights validation"
+  },
+  "referencedComponents": [
+    "ResonantShellState.providerRouting"
+  ],
+  "createdAt": "2025-07-14T00:00:00Z",
+  "updatedAt": "2025-07-14T00:00:00Z"
+}

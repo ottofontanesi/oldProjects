@@ -1,0 +1,25 @@
+{
+  "id": "contract-scoring-circuit-breaker-activation",
+  "version": "1.0.0",
+  "description": "The circuit breaker activates (opens) after 3 consecutive scoring failures and re-enables after cooldown",
+  "category": "provider-routing",
+  "preconditions": [
+    {
+      "description": "The scoring engine experiences 3 consecutive failures (exceptions or timeouts)"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "The circuit breaker transitions to open state, shouldAttemptScoring returns false, and scoring is disabled until cooldown expires",
+    "assertion": "truthy"
+  },
+  "verificationMethod": {
+    "type": "unit-test",
+    "testFile": "src/core/scoring-advisory.test.ts",
+    "testName": "Property 13: Circuit breaker state transitions"
+  },
+  "referencedComponents": [
+    "ResonantShellState.providerRouting"
+  ],
+  "createdAt": "2025-07-14T00:00:00Z",
+  "updatedAt": "2025-07-14T00:00:00Z"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "contract-scoring-20ms-budget",
+  "version": "1.0.0",
+  "description": "Scoring computation completes within 20 milliseconds for up to 10 candidate agents",
+  "category": "provider-routing",
+  "preconditions": [
+    {
+      "description": "Up to 10 candidate agents are provided with full historical data available"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "The scoreCandidates function returns a ScoringRecommendation with scoringDurationMs < 20",
+    "assertion": "truthy"
+  },
+  "verificationMethod": {
+    "type": "unit-test",
+    "testFile": "src/core/scoring-integration.test.ts",
+    "testName": "scoring 10 candidates completes within 20ms"
+  },
+  "referencedComponents": [
+    "ResonantShellState.providerRouting"
+  ],
+  "createdAt": "2025-07-14T00:00:00Z",
+  "updatedAt": "2025-07-14T00:00:00Z"
+}

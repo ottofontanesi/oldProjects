@@ -1,0 +1,33 @@
+{
+  "contractId": "doctor-read-only",
+  "version": "1.0.0",
+  "phase": 8,
+  "description": "Doctor diagnostic checks are read-only and never modify configuration, credentials, or system state during diagnosis",
+  "category": "safety",
+  "property": "For any diagnostic check execution (full or quick), the system SHALL NOT modify any configuration value, credential, or system state",
+  "invariants": [
+    {
+      "id": "config-unchanged-after-diagnostic",
+      "description": "Configuration file content must be identical before and after running diagnostics",
+      "assertion": "config_hash_before == config_hash_after"
+    },
+    {
+      "id": "credentials-unchanged-after-diagnostic",
+      "description": "Credential store must be identical before and after running diagnostics",
+      "assertion": "credential_store_before == credential_store_after"
+    },
+    {
+      "id": "no-write-operations-during-check",
+      "description": "No file write operations occur during diagnostic execution",
+      "assertion": "write_operations_count == 0"
+    }
+  ],
+  "testStrategy": "property-based",
+  "triggerConditions": [
+    "diagnostic-run",
+    "quick-check-run",
+    "manual-trigger"
+  ],
+  "failureAction": "block-merge",
+  "relatedRequirements": ["4.6", "5.6"]
+}

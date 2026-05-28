@@ -1,0 +1,27 @@
+{
+  "id": "contract-evaluator-no-auto-install",
+  "version": "1.0.0",
+  "description": "No candidate agent is installed without explicit human approval. The hasApprovalForInstall check must pass before any installation proceeds.",
+  "category": "agent-evaluator",
+  "preconditions": [
+    {
+      "description": "A candidate agent exists in 'presented-for-approval' or later status"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "Installation only proceeds when an ApprovalRecord with decision 'approve' exists for the candidate. processApprovalDecision with 'reject' or 'defer' never triggers installation.",
+    "assertion": "truthy"
+  },
+  "verificationMethod": {
+    "type": "property-test",
+    "testFile": "src/core/agent-evaluator-approval.test.ts",
+    "testName": "Property 1: Human approval gate enforcement"
+  },
+  "referencedComponents": [
+    "hasApprovalForInstall",
+    "processApprovalDecision",
+    "prepareInstallation"
+  ],
+  "createdAt": "2025-07-20T00:00:00Z",
+  "updatedAt": "2025-07-20T00:00:00Z"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "contract-rl-zero-tokens",
+  "version": "1.0.0",
+  "description": "RL system adds zero tokens to any agent prompt, context window, or conversation thread and triggers no LLM API calls",
+  "category": "rl-policy",
+  "preconditions": [
+    {
+      "description": "Any inference request or training job execution"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "No tokens are added to any agent prompt and no LLM API calls are triggered",
+    "assertion": "truthy"
+  },
+  "verificationMethod": {
+    "type": "unit-test",
+    "testFile": "src/core/rl-behavioral-contracts.test.ts",
+    "testName": "zero token guarantee"
+  },
+  "referencedComponents": [
+    "RLInferenceService",
+    "RLAdvisoryIntegration",
+    "TrainingPipeline"
+  ],
+  "createdAt": "2025-07-14T00:00:00Z",
+  "updatedAt": "2025-07-14T00:00:00Z"
+}

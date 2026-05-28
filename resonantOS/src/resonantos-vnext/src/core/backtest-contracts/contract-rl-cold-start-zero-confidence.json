@@ -1,0 +1,26 @@
+{
+  "id": "contract-rl-cold-start-zero-confidence",
+  "version": "1.0.0",
+  "description": "During cold start (before graduation), all inference requests produce confidence score of exactly 0.0",
+  "category": "rl-policy",
+  "preconditions": [
+    {
+      "description": "ColdStartState.has_graduated is false"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "The returned confidence_score is exactly 0.0",
+    "assertion": "truthy"
+  },
+  "verificationMethod": {
+    "type": "unit-test",
+    "testFile": "src/core/rl-behavioral-contracts.test.ts",
+    "testName": "cold start produces zero confidence"
+  },
+  "referencedComponents": [
+    "ColdStartState",
+    "RLInferenceService"
+  ],
+  "createdAt": "2025-07-14T00:00:00Z",
+  "updatedAt": "2025-07-14T00:00:00Z"
+}

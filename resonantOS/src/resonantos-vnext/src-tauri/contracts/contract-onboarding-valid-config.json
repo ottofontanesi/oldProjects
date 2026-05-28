@@ -1,0 +1,32 @@
+{
+  "contractId": "onboarding-valid-config",
+  "version": "1.0.0",
+  "phase": 8,
+  "description": "Onboarding Wizard produces a valid ConfigurationProfile on completion that passes all validation checks without critical findings",
+  "category": "correctness",
+  "property": "For any completed wizard flow, the resulting ConfigurationProfile SHALL pass all Configuration_Validation_Engine checks without findings of severity 'critical'",
+  "invariants": [
+    {
+      "id": "profile-passes-validation",
+      "description": "The produced ConfigurationProfile must pass validate_configuration_profile() without errors",
+      "assertion": "validate_configuration_profile(profile).is_ok()"
+    },
+    {
+      "id": "no-critical-findings",
+      "description": "Running diagnostics on the produced profile must yield zero critical findings",
+      "assertion": "diagnostic_report.findings.filter(f => f.severity == 'critical').length == 0"
+    },
+    {
+      "id": "required-fields-present",
+      "description": "The profile must have a valid hardware_class, applied_at timestamp, and at least one credential or model",
+      "assertion": "profile.hardware_class != null && profile.applied_at != '' && (profile.credentials.length > 0 || profile.models.length > 0)"
+    }
+  ],
+  "testStrategy": "property-based",
+  "triggerConditions": [
+    "onboarding-complete",
+    "manual-trigger"
+  ],
+  "failureAction": "block-merge",
+  "relatedRequirements": ["1.6"]
+}

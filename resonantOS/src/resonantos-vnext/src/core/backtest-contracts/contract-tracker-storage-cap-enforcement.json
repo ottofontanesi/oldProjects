@@ -1,0 +1,27 @@
+{
+  "id": "contract-tracker-storage-cap-enforcement",
+  "version": "1.0.0",
+  "description": "When database storage reaches 90% of max_storage_bytes, eviction is triggered automatically; expired records are deleted respecting retention_days_traces and retention_days_metrics; aggregate_stats are never deleted",
+  "category": "tool-call-tracker",
+  "preconditions": [
+    {
+      "description": "The periodic eviction job runs and detects storage usage at or above 90% threshold"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "Old tool_call_records and task_analysis_results beyond retention are deleted; aggregate_stats remain unchanged; storage usage decreases below threshold",
+    "assertion": "truthy"
+  },
+  "verificationMethod": {
+    "type": "property-test",
+    "testFile": "src-tauri/src/tool_call_tracker_service.rs",
+    "testName": "Property 10: Retention policy enforcement"
+  },
+  "referencedComponents": [
+    "tool_call_tracker_service::check_and_evict_if_needed",
+    "tool_call_tracker_service::evict_expired_records",
+    "tool_call_tracker_service::check_storage_usage"
+  ],
+  "createdAt": "2026-07-15T00:00:00Z",
+  "updatedAt": "2026-07-15T00:00:00Z"
+}

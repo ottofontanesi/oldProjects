@@ -1,0 +1,26 @@
+{
+  "id": "contract-rl-background-thread",
+  "version": "1.0.0",
+  "description": "RL inference runs on a background thread and never blocks the main UI or routing thread",
+  "category": "rl-policy",
+  "preconditions": [
+    {
+      "description": "An inference request is made during normal operation"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "Inference executes asynchronously on a background thread with a 10ms timeout; the main thread is never blocked",
+    "assertion": "truthy"
+  },
+  "verificationMethod": {
+    "type": "unit-test",
+    "testFile": "src/core/rl-behavioral-contracts.test.ts",
+    "testName": "inference runs on background thread"
+  },
+  "referencedComponents": [
+    "RLInferenceService",
+    "RLAdvisoryIntegration"
+  ],
+  "createdAt": "2025-07-14T00:00:00Z",
+  "updatedAt": "2025-07-14T00:00:00Z"
+}

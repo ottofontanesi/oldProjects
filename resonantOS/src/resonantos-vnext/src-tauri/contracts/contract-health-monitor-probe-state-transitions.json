@@ -1,0 +1,10 @@
+{
+  "contractId": "contract-health-monitor-probe-state-transitions",
+  "version": "1.0.0",
+  "description": "Health state transitions are correct for probe results — ready/degraded/unavailable based on probe outcomes and consecutive failure count",
+  "property": "Property 1: For any provider route and for any sequence of probe results, the resulting RuntimeNodeHealthState SHALL be ready if latest probe succeeded with latency ≤ 2× rolling average, degraded if HTTP error/timeout/latency spike, unavailable if 3+ consecutive failures",
+  "validatesRequirements": ["1.2", "1.5", "1.6"],
+  "testStrategy": "proptest",
+  "testLocation": "src-tauri/src/health_monitor.rs",
+  "enforcedBy": "cargo test"
+}

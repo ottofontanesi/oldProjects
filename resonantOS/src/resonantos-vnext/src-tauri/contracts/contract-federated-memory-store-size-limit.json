@@ -1,0 +1,10 @@
+{
+  "contractId": "contract-federated-memory-store-size-limit",
+  "version": "1.0.0",
+  "description": "Store size invariant — total stored FactRecords never exceeds 50, with eviction of expired-TTL records first then oldest non-expired",
+  "property": "Property 11: For any sequence of write operations to the Federated Memory, the total number of stored FactRecord entries SHALL never exceed 50. When at capacity, expired-TTL records are evicted first (oldest expiry first), then oldest non-expired records",
+  "validatesRequirements": ["7.2"],
+  "testStrategy": "proptest",
+  "testLocation": "src-tauri/src/federated_memory_service.rs",
+  "enforcedBy": "cargo test"
+}

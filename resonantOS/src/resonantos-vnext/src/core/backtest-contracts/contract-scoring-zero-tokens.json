@@ -1,0 +1,28 @@
+{
+  "id": "contract-scoring-zero-tokens",
+  "version": "1.0.0",
+  "description": "The scoring engine adds zero tokens to any agent prompt and triggers no LLM API calls",
+  "category": "provider-routing",
+  "preconditions": [
+    {
+      "description": "The scoring engine is computing a recommendation for a DelegationPacket"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "No tokens are added to any context window, no LLM API calls are made, and no billable tokens are consumed during scoring",
+    "assertion": "truthy"
+  },
+  "verificationMethod": {
+    "type": "smoke",
+    "steps": [
+      "Trigger scoring computation for a DelegationPacket",
+      "Verify no outbound LLM API requests are made during scoring",
+      "Verify the agent prompt context window is unchanged after scoring completes"
+    ]
+  },
+  "referencedComponents": [
+    "ResonantShellState.providerRouting"
+  ],
+  "createdAt": "2025-07-14T00:00:00Z",
+  "updatedAt": "2025-07-14T00:00:00Z"
+}

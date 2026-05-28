@@ -1,0 +1,10 @@
+{
+  "contractId": "contract-federated-memory-access-control",
+  "version": "1.0.0",
+  "description": "Access control enforcement — only trusted agents (strategist.core, setup.core, logician.core) can read/write, unauthorized attempts are rejected and logged",
+  "property": "Property 13: For any agent identifier, Federated Memory read and write operations SHALL succeed if and only if the agent is in the Trusted_Agent_Set. For untrusted agents, the operation SHALL be rejected and an access_log entry with operation containing unauthorized SHALL be created",
+  "validatesRequirements": ["8.1", "8.2", "8.3"],
+  "testStrategy": "proptest",
+  "testLocation": "src-tauri/src/federated_memory_service.rs",
+  "enforcedBy": "cargo test"
+}

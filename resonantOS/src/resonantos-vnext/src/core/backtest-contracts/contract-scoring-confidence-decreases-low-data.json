@@ -1,0 +1,25 @@
+{
+  "id": "contract-scoring-confidence-decreases-low-data",
+  "version": "1.0.0",
+  "description": "Confidence scores decrease when insufficient historical data is available for the top-ranked agent",
+  "category": "provider-routing",
+  "preconditions": [
+    {
+      "description": "The top-ranked agent has fewer than 5 historical LogicianExecutionArtifact records for the matching DelegationTaskType"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "The confidenceScore is reduced proportionally to the data volume (record count / 5), approaching 0.0 with no data",
+    "assertion": "truthy"
+  },
+  "verificationMethod": {
+    "type": "unit-test",
+    "testFile": "src/core/scoring-engine.test.ts",
+    "testName": "Property 7: Confidence score bounded and data-sensitive"
+  },
+  "referencedComponents": [
+    "ResonantShellState.providerRouting"
+  ],
+  "createdAt": "2025-07-14T00:00:00Z",
+  "updatedAt": "2025-07-14T00:00:00Z"
+}

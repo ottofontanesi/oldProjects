@@ -1,0 +1,26 @@
+{
+  "id": "contract-rl-inference-5ms",
+  "version": "1.0.0",
+  "description": "RL inference forward pass completes within 5 milliseconds on the Desktop local node without GPU",
+  "category": "rl-policy",
+  "preconditions": [
+    {
+      "description": "A valid ONNX model is loaded and a state vector is constructed"
+    }
+  ],
+  "expectedOutcome": {
+    "description": "The infer_recommendation function completes the forward pass with inferenceDurationMs < 5",
+    "assertion": "truthy"
+  },
+  "verificationMethod": {
+    "type": "unit-test",
+    "testFile": "src/core/rl-behavioral-contracts.test.ts",
+    "testName": "inference completes within 5ms"
+  },
+  "referencedComponents": [
+    "RLInferenceService",
+    "LoadedModel"
+  ],
+  "createdAt": "2025-07-14T00:00:00Z",
+  "updatedAt": "2025-07-14T00:00:00Z"
+}
