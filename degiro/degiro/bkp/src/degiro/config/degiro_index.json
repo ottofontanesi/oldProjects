@@ -1,0 +1,2278 @@
+{
+	"stockCountries": [
+		{
+			"id": 908,
+			"country": 908,
+			"indices": [
+				112002, 16, 112001, 120005
+			]
+		}, {
+			"id": 895,
+			"country": 895,
+			"indices": [
+				10, 115002, 115001
+			]
+		}, {
+			"id": 953,
+			"country": 953,
+			"indices": [
+				107002, 107001
+			]
+		}, {
+			"id": 975,
+			"country": 975,
+			"indices": [
+				109006, 15, 109001, 109003, 109004, 120005
+			]
+		}, {
+			"id": 954,
+			"country": 954,
+			"indices": [
+				18
+			]
+		}, {
+			"id": 899,
+			"country": 899,
+			"indices": [
+				120001, 17, 120003, 120004, 120002, 120005
+			]
+		}, {
+			"id": 976,
+			"country": 976,
+			"indices": [
+				19, 121001, 121002, 121003, 121004
+			]
+		}, {
+			"id": 911,
+			"country": 911,
+			"indices": [
+				111002, 111001, 111004, 111005, 111003
+			]
+		}, {
+			"id": 978,
+			"country": 978,
+			"indices": [
+				1, 2, 3
+			]
+		}, {
+			"id": 957,
+			"country": 957,
+			"indices": [
+				105002, 105001
+			]
+		}, {
+			"id": 913,
+			"country": 913,
+			"indices": [
+				103003, 103001, 103002
+			]
+		}, {
+			"id": 959,
+			"country": 959,
+			"indices": [
+				104001
+			]
+		}, {
+			"id": 915,
+			"country": 915,
+			"indices": [
+				11, 110003, 110004, 110001, 110002
+			]
+		}, {
+			"id": 1030,
+			"country": 1030,
+			"indices": [
+				126001
+			]
+		}, {
+			"id": 880,
+			"country": 880,
+			"indices": [
+				116001
+			]
+		}, {
+			"id": 982,
+			"country": 982,
+			"indices": [
+				4, 102002, 102001
+			]
+		}, {
+			"id": 940,
+			"country": 940,
+			"indices": [
+				108003, 108001, 108002
+			]
+		}, {
+			"id": 886,
+			"country": 886,
+			"indices": [
+				5, 101005, 101002, 101006
+			]
+		}, {
+			"id": 963,
+			"country": 963,
+			"indices": [
+				114002, 114004, 114005, 114001, 114003
+			]
+		}, {
+			"id": 1023,
+			"country": 1023,
+			"indices": [
+				125001
+			]
+		}, {
+			"id": 845,
+			"country": 845,
+			"exchanges": [
+				893, 892
+			]
+		}, {
+			"id": 923,
+			"country": 923,
+			"indices": [
+				9, 113001, 113002, 113003, 113004, 113005, 113006
+			]
+		}, {
+			"id": 846,
+			"country": 846,
+			"exchanges": [
+				650, 1004, 663
+			],
+			"indices": [
+				12, 122001, 13, 14
+			]
+		}, {
+			"id": 849,
+			"country": 849,
+			"indices": [
+				124001
+			]
+		}, {
+			"id": 905,
+			"country": 905,
+			"indices": [
+				123001
+			]
+		}, {
+			"id": 906,
+			"country": 906,
+			"indices": [
+				6, 106002, 106003, 106001
+			]
+		}
+	],
+	"bondExchanges": [
+		{
+			"id": 5001,
+			"country": 905,
+			"exchange": 5001
+		}, {
+			"id": 5002,
+			"country": 849,
+			"exchange": 5002
+		}, {
+			"id": 194,
+			"country": 906,
+			"exchange": 194,
+			"postfix": "XETRA"
+		}, {
+			"id": 195,
+			"country": 906,
+			"exchange": 195,
+			"postfix": "Frankfurt"
+		}, {
+			"id": 690,
+			"country": 911,
+			"exchange": 690
+		}, {
+			"id": 570,
+			"country": 923,
+			"exchange": 570
+		}, {
+			"id": 892,
+			"country": 845,
+			"exchange": 892
+		}, {
+			"id": 454,
+			"country": 1023,
+			"exchange": 454
+		}, {
+			"id": 676,
+			"country": 846,
+			"exchange": 676,
+			"postfix": "NYSE"
+		}, {
+			"id": 710,
+			"country": 886,
+			"exchange": 710
+		}, {
+			"id": 855,
+			"country": 959,
+			"exchange": 855
+		}, {
+			"id": 999,
+			"country": 957,
+			"exchange": 999
+		}, {
+			"id": 219,
+			"country": 940,
+			"exchange": 219
+		}, {
+			"id": 979,
+			"country": 976,
+			"exchange": 979,
+			"postfix": "Virt-x"
+		}, {
+			"id": 460,
+			"country": 880,
+			"exchange": 460
+		}, {
+			"id": 384,
+			"country": 963,
+			"exchange": 384
+		}, {
+			"id": 560,
+			"country": 954,
+			"exchange": 560
+		}, {
+			"id": 320,
+			"country": 982,
+			"exchange": 320
+		}, {
+			"id": 200,
+			"country": 978,
+			"exchange": 200
+		}, {
+			"id": 860,
+			"country": 899,
+			"exchange": 860
+		}, {
+			"id": 663,
+			"country": 846,
+			"exchange": 663,
+			"postfix": "NASDAQ"
+		}, {
+			"id": 1004,
+			"country": 846,
+			"exchange": 1004,
+			"postfix": "ARCA"
+		}, {
+			"id": 1002,
+			"country": 1030,
+			"exchange": 1002
+		}, {
+			"id": 1001,
+			"country": 908,
+			"exchange": 1001
+		}, {
+			"id": 801,
+			"country": 913,
+			"exchange": 801
+		}, {
+			"id": 947,
+			"country": 976,
+			"exchange": 947,
+			"postfix": "SWX"
+		}, {
+			"id": 508,
+			"country": 975,
+			"exchange": 508
+		}, {
+			"id": 608,
+			"country": 915,
+			"exchange": 608
+		}
+	],
+	"bondIssuerTypes": [
+		{
+			"id": 0,
+			"name": "all",
+			"translation": "Koersen.step1.530"
+		}, {
+			"id": 1,
+			"name": "state",
+			"translation": "Koersen.step1.543"
+		}, {
+			"id": 2,
+			"name": "company",
+			"translation": "Koersen.step1.544"
+		}
+	],
+	"eurexCountries": [
+		{
+			"id": 908,
+			"name": "FI",
+			"exchanges": [
+				{
+					"id": 1001,
+					"code": "HE",
+					"hiqAbbr": "HSE",
+					"country": "FI",
+					"city": "Helsinki",
+					"micCode": "XHEL",
+					"name": "OMX Helsinki"
+				}
+			],
+			"underlyingExchangeIds": [
+				1001
+			]
+		}, {
+			"id": 982,
+			"name": "BE",
+			"exchanges": [
+				{
+					"id": 320,
+					"code": "XBRU",
+					"hiqAbbr": "EBR",
+					"country": "BE",
+					"city": "Brussels",
+					"micCode": "XBRU",
+					"name": "Euronext Brussels"
+				}
+			],
+			"underlyingExchangeIds": [
+				320
+			]
+		}, {
+			"id": 895,
+			"name": "ES",
+			"exchanges": [
+				{
+					"id": 590,
+					"code": "XMAD",
+					"hiqAbbr": "MAD",
+					"country": "ES",
+					"city": "Madrid",
+					"micCode": "XMAD",
+					"name": "Bolsa de Madrid"
+				}
+			],
+			"underlyingExchangeIds": [
+				590
+			]
+		}, {
+			"id": 940,
+			"name": "GR",
+			"exchanges": [
+				{
+					"id": 219,
+					"code": "ASEX",
+					"hiqAbbr": "ATH",
+					"country": "GR",
+					"city": "Athens",
+					"micCode": "ASEX",
+					"name": "Athens Stock Exchange (ATHEX)1"
+				}
+			],
+			"underlyingExchangeIds": [
+				219
+			]
+		}, {
+			"id": 886,
+			"name": "FR",
+			"exchanges": [
+				{
+					"id": 710,
+					"code": "XPAR",
+					"hiqAbbr": "EPA",
+					"country": "FR",
+					"city": "Paris",
+					"micCode": "XPAR",
+					"name": "Euronext Paris"
+				}
+			],
+			"underlyingExchangeIds": [
+				710
+			]
+		}, {
+			"id": 975,
+			"name": "DK",
+			"exchanges": [
+				{
+					"id": 508,
+					"code": "CO",
+					"hiqAbbr": "OMK",
+					"country": "DK",
+					"city": "Copenhagen",
+					"micCode": "XCSE",
+					"name": "OMX Copenhagen"
+				}
+			],
+			"underlyingExchangeIds": [
+				508
+			]
+		}, {
+			"id": 954,
+			"name": "PT",
+			"exchanges": [
+				{
+					"id": 560,
+					"code": "XLIS",
+					"hiqAbbr": "ELI",
+					"country": "PR",
+					"city": "Lissabon",
+					"micCode": "XLIS",
+					"name": "Euronext Lisbon"
+				}
+			],
+			"underlyingExchangeIds": [
+				560
+			]
+		}, {
+			"id": 976,
+			"name": "CH",
+			"exchanges": [
+				{
+					"id": 979,
+					"code": "XVTX",
+					"hiqAbbr": "VTX",
+					"country": "CH",
+					"city": "Zurich",
+					"micCode": "XVTX",
+					"name": "SIX Swiss Exchange (Virt-x)"
+				}
+			],
+			"underlyingExchangeIds": [
+				979
+			]
+		}, {
+			"id": 846,
+			"name": "US",
+			"exchanges": [
+				{
+					"id": 663,
+					"code": "XNAS",
+					"hiqAbbr": "NDQ",
+					"country": "US",
+					"city": "New York",
+					"micCode": "XNAS",
+					"name": "NASDAQ"
+				}, {
+					"id": 676,
+					"code": "XNYS",
+					"hiqAbbr": "NSY",
+					"country": "US",
+					"city": "New York",
+					"micCode": "XNYS",
+					"name": "New York Stock Exchange"
+				}
+			],
+			"underlyingExchangeIds": [
+				663, 676
+			]
+		}, {
+			"id": 978,
+			"name": "NL",
+			"exchanges": [
+				{
+					"id": 200,
+					"code": "XAMS",
+					"hiqAbbr": "EAM",
+					"country": "NL",
+					"city": "Amsterdam",
+					"micCode": "XAMS",
+					"name": "Euronext Amsterdam"
+				}
+			],
+			"underlyingExchangeIds": [
+				200
+			]
+		}, {
+			"id": 923,
+			"name": "GB",
+			"exchanges": [
+				{
+					"id": 570,
+					"code": "XLON",
+					"hiqAbbr": "LSE",
+					"country": "UK",
+					"city": "London",
+					"micCode": "XLON",
+					"name": "London Stock Exchange (LSE)"
+				}
+			],
+			"underlyingExchangeIds": [
+				570
+			]
+		}, {
+			"id": 913,
+			"name": "PL",
+			"exchanges": [
+				{
+					"id": 801,
+					"code": "XWAR",
+					"hiqAbbr": "WSE",
+					"country": "PL",
+					"city": "Warsaw",
+					"micCode": "XWAR",
+					"name": "Warsaw Stock Exchange"
+				}
+			],
+			"underlyingExchangeIds": [
+				801
+			]
+		}, {
+			"id": 957,
+			"name": "AT",
+			"exchanges": [
+				{
+					"id": 999,
+					"code": "XWBO",
+					"hiqAbbr": "WEN",
+					"country": "AT",
+					"city": "Vienna",
+					"micCode": "XWBO",
+					"name": "Vienna Stock Exchange (WBAG)"
+				}
+			],
+			"underlyingExchangeIds": [
+				999
+			]
+		}, {
+			"id": 915,
+			"name": "IT",
+			"exchanges": [
+				{
+					"id": 608,
+					"code": "MTAA",
+					"hiqAbbr": "MIL",
+					"country": "IT",
+					"city": "Milan",
+					"micCode": "MTAA",
+					"name": "Borsa Italiana S.p.A."
+				}
+			],
+			"underlyingExchangeIds": [
+				608
+			]
+		}, {
+			"id": 906,
+			"name": "DE",
+			"exchanges": [
+				{
+					"id": 194,
+					"code": "XETR",
+					"hiqAbbr": "XET",
+					"country": "DE",
+					"city": "Frankfurt",
+					"micCode": "XETR",
+					"name": "Xetra"
+				}
+			],
+			"underlyingExchangeIds": [
+				194
+			]
+		}
+	],
+	"futureExchanges": [
+		{
+			"id": 1,
+			"name": "Euronext Liffe"
+		}, {
+			"id": 2,
+			"name": "Eurex",
+			"eurexCountries": [
+				908, 982, 895, 940, 886, 975, 954, 976, 846, 978, 923, 913, 957, 915, 906
+			]
+		}, {
+			"id": 3,
+			"name": "MEFF"
+		}, {
+			"id": 4,
+			"name": "OMX"
+		}, {
+			"id": 5,
+			"name": "IDEM"
+		}, {
+			"id": 6,
+			"name": "CME"
+		}, {
+			"id": 7,
+			"name": "CBOT"
+		}, {
+			"id": 8,
+			"name": "NYMEX"
+		}, {
+			"id": 9,
+			"name": "COMEX"
+		}
+	],
+	"optionExchanges": [
+		{
+			"id": 11,
+			"name": "NYMEX",
+			"exchangeId": 365
+		}, {
+			"id": 1,
+			"name": "Euronext Amsterdam",
+			"underlyingExchangeIds": [
+				200, 212, 3001
+			],
+			"exchangeId": 1006
+		}, {
+			"id": 2,
+			"name": "Euronext Brussels",
+			"underlyingExchangeIds": [
+				320, 324
+			],
+			"exchangeId": 1006
+		}, {
+			"id": 13,
+			"name": "CBOE",
+			"exchangeId": 1005
+		}, {
+			"id": 3,
+			"name": "Euronext Paris",
+			"underlyingExchangeIds": [
+				710, 714
+			],
+			"exchangeId": 1006
+		}, {
+			"id": 4,
+			"name": "Euronext Lisbon",
+			"underlyingExchangeIds": [
+				560
+			],
+			"exchangeId": 1006
+		}, {
+			"id": 5,
+			"name": "Eurex",
+			"eurexCountries": [
+				908, 982, 895, 940, 886, 975, 954, 976, 846, 978, 923, 913, 957, 915, 906
+			],
+			"underlyingExchangeIds": [
+				1001, 320, 590, 219, 710, 508, 560, 979, 663, 676, 200, 570, 801, 999, 608, 194
+			],
+			"exchangeId": 185
+		}, {
+			"id": 6,
+			"name": "MEFF",
+			"exchangeId": 592
+		}, {
+			"id": 7,
+			"name": "OMX",
+			"exchangeId": 1008
+		}, {
+			"id": 8,
+			"name": "IDEM",
+			"exchangeId": 610
+		}, {
+			"id": 9,
+			"name": "CME",
+			"exchangeId": 359
+		}
+	],
+	"combinationExchanges": [
+		{
+			"id": 1,
+			"name": "Euronext Amsterdam"
+		}, {
+			"id": 2,
+			"name": "Euronext Brussels"
+		}, {
+			"id": 3,
+			"name": "Euronext Paris"
+		}
+	],
+	"cfdExchanges": [
+		{
+			"id": 194,
+			"country": 906,
+			"exchange": 194
+		}, {
+			"id": 590,
+			"country": 895,
+			"exchange": 590
+		}, {
+			"id": 570,
+			"country": 923,
+			"exchange": 570
+		}, {
+			"id": 384,
+			"country": 963,
+			"exchange": 384
+		}, {
+			"id": 560,
+			"country": 954,
+			"exchange": 560
+		}, {
+			"id": 320,
+			"country": 982,
+			"exchange": 320
+		}, {
+			"id": 200,
+			"country": 978,
+			"exchange": 200
+		}, {
+			"id": 860,
+			"country": 899,
+			"exchange": 860
+		}, {
+			"id": 520,
+			"country": 911,
+			"exchange": 520
+		}, {
+			"id": 663,
+			"country": 846,
+			"exchange": 663
+		}, {
+			"id": 676,
+			"country": 846,
+			"exchange": 676
+		}, {
+			"id": 710,
+			"country": 886,
+			"exchange": 710
+		}, {
+			"id": 1001,
+			"country": 908,
+			"exchange": 1001
+		}, {
+			"id": 999,
+			"country": 957,
+			"exchange": 999
+		}, {
+			"id": 979,
+			"country": 976,
+			"exchange": 979
+		}, {
+			"id": 947,
+			"country": 976,
+			"exchange": 947
+		}, {
+			"id": 508,
+			"country": 975,
+			"exchange": 508
+		}, {
+			"id": 608,
+			"country": 915,
+			"exchange": 608
+		}
+	],
+	"exchanges": [
+		{
+			"id": 190,
+			"code": "CATS",
+			"hiqAbbr": "CAT",
+			"country": "DE",
+			"city": "Frankfurt",
+			"micCode": "CATS",
+			"name": "CATS"
+		}, {
+			"id": 3001,
+			"code": "XCUR",
+			"hiqAbbr": "CNX",
+			"country": "US",
+			"city": "New York",
+			"micCode": "XCUR",
+			"name": "Currenex"
+		}, {
+			"id": 3000,
+			"hiqAbbr": "UIT",
+			"country": "XX",
+			"name": "Uithandelaar"
+		}, {
+			"id": 194,
+			"code": "XETR",
+			"hiqAbbr": "XET",
+			"country": "DE",
+			"city": "Frankfurt",
+			"micCode": "XETR",
+			"name": "Xetra"
+		}, {
+			"id": 590,
+			"code": "XMAD",
+			"hiqAbbr": "MAD",
+			"country": "ES",
+			"city": "Madrid",
+			"micCode": "XMAD",
+			"name": "Bolsa de Madrid"
+		}, {
+			"id": 470,
+			"code": "XSGO",
+			"hiqAbbr": "SSE",
+			"country": "CL",
+			"city": "Santiago",
+			"micCode": "XSGO",
+			"name": "Santiago Stock Exchange (SSE)"
+		}, {
+			"id": 195,
+			"code": "XFRA",
+			"hiqAbbr": "FRA",
+			"country": "DE",
+			"city": "Frankfurt",
+			"micCode": "XFRA",
+			"name": "Borse Frankfurt"
+		}, {
+			"id": 196,
+			"code": "XGAT",
+			"hiqAbbr": "TDG",
+			"country": "DE",
+			"city": "Frankfurt",
+			"micCode": "XGAT",
+			"name": "Tradegate AG"
+		}, {
+			"id": 592,
+			"code": "XMEF",
+			"hiqAbbr": "MEF",
+			"country": "ES",
+			"city": "Madrid",
+			"micCode": "XMRV",
+			"name": "Mercado Espanol de Futuros Financieros (MEFF)"
+		}, {
+			"id": 594,
+			"code": "XMCE",
+			"hiqAbbr": "SIB",
+			"country": "ES",
+			"city": "Madrid",
+			"micCode": "XMCE",
+			"name": "Continuous Market (SIBE)"
+		}, {
+			"id": 870,
+			"code": "NZFX",
+			"hiqAbbr": "NZX",
+			"country": "NZ",
+			"city": "Wellington",
+			"micCode": "NZFX",
+			"name": "New Zealand Stock Exchange (NZX)"
+		}, {
+			"id": 359,
+			"code": "XCME",
+			"hiqAbbr": "CME",
+			"country": "US",
+			"city": "Chicago",
+			"micCode": "XCME",
+			"name": "Chicago Mercantile Exchange (CME)"
+		}, {
+			"id": 910,
+			"code": "XKRX",
+			"hiqAbbr": "KRX",
+			"country": "KR",
+			"city": "Busan",
+			"micCode": "XKRX",
+			"name": "Korea Exchange (KRX)"
+		}, {
+			"id": 999,
+			"code": "XWBO",
+			"hiqAbbr": "WEN",
+			"country": "AT",
+			"city": "Vienna",
+			"micCode": "XWBO",
+			"name": "Vienna Stock Exchange (WBAG)"
+		}, {
+			"id": 1979,
+			"hiqAbbr": "CHV",
+			"country": "CH",
+			"city": "Zurich",
+			"micCode": "CHIX",
+			"name": "CHI-X Virt-x"
+		}, {
+			"id": 9997,
+			"hiqAbbr": "OTG",
+			"country": "XX",
+			"name": "OTC GS FX"
+		}, {
+			"id": 9998,
+			"hiqAbbr": "OTP",
+			"country": "XX",
+			"name": "OTC Bonds Paris (OTP)"
+		}, {
+			"id": 480,
+			"code": "XBSP",
+			"hiqAbbr": "BMF",
+			"country": "BR",
+			"city": "Sao Paulo",
+			"micCode": "XBSP",
+			"name": "BM&FBOVESPA"
+		}, {
+			"id": 1194,
+			"hiqAbbr": "CHX",
+			"country": "DE",
+			"city": "Frankfurt",
+			"micCode": "CHIX",
+			"name": "CHI-X Xetra"
+		}, {
+			"id": 362,
+			"code": "XCBT",
+			"hiqAbbr": "CBT",
+			"country": "US",
+			"city": "Chicago",
+			"micCode": "XCBT",
+			"name": "Chicago Board of Trade (CBOT)"
+		}, {
+			"id": 880,
+			"code": "IDX",
+			"hiqAbbr": "IDX",
+			"country": "ID",
+			"city": "Jakarta",
+			"micCode": "IDX",
+			"name": "Indonesia Stock Exchange (IDX)"
+		}, {
+			"id": 485,
+			"code": "XBUE",
+			"hiqAbbr": "MRV",
+			"country": "AR",
+			"city": "Buenos Aires",
+			"micCode": "XBUE",
+			"name": "Buenos Aires Stock Exchange"
+		}, {
+			"id": 365,
+			"code": "XNYM",
+			"hiqAbbr": "NYM",
+			"country": "US",
+			"city": "Chicago",
+			"micCode": "XNYM",
+			"name": "New York Mercantile Exchange (NYMEX)"
+		}, {
+			"id": 486,
+			"code": "XMEX",
+			"hiqAbbr": "MXX",
+			"country": "MX",
+			"city": "Mexico City",
+			"micCode": "XMEX",
+			"name": "Bolsa Mexicana de Valores"
+		}, {
+			"id": 520,
+			"code": "XOSL",
+			"hiqAbbr": "OSL",
+			"country": "NO",
+			"city": "Oslo",
+			"micCode": "XOSL",
+			"name": "Oslo Børs"
+		}, {
+			"id": 367,
+			"code": "XNYM",
+			"hiqAbbr": "CEC",
+			"country": "US",
+			"city": "Chicago",
+			"micCode": "XCEC",
+			"name": "Commodity Exchange (COMEX)"
+		}, {
+			"id": 920,
+			"code": "XTAI",
+			"hiqAbbr": "TWX",
+			"country": "TW",
+			"city": "Taipei",
+			"micCode": "XTAI",
+			"name": "Taiwan Stock Exchange (TWSE)"
+		}, {
+			"id": 801,
+			"code": "XWAR",
+			"hiqAbbr": "WSE",
+			"country": "PL",
+			"city": "Warsaw",
+			"micCode": "XWAR",
+			"name": "Warsaw Stock Exchange"
+		}, {
+			"id": 805,
+			"code": "XNAI",
+			"hiqAbbr": "NTX",
+			"country": "KE",
+			"city": "Nairobi",
+			"micCode": "XNAI",
+			"name": "Nairobi Stock Exchange"
+		}, {
+			"id": 1000,
+			"hiqAbbr": "DEG",
+			"country": "XX",
+			"city": "Amsterdam",
+			"name": "DEGIRO"
+		}, {
+			"id": 490,
+			"code": "XMOS",
+			"hiqAbbr": "MCX",
+			"country": "RU",
+			"city": "Moscow",
+			"micCode": "XMOS",
+			"name": "Moscow Interbank Currency Exchange (MICEX)"
+		}, {
+			"id": 495,
+			"code": "MISX",
+			"hiqAbbr": "RTS",
+			"country": "RU",
+			"city": "Moscow",
+			"micCode": "MISX",
+			"name": "Russian Trading System"
+		}, {
+			"id": 650,
+			"code": "XASE",
+			"hiqAbbr": "ASE",
+			"country": "US",
+			"city": "New York",
+			"micCode": "XASE",
+			"name": "NYSE MKT - Amex"
+		}, {
+			"id": 892,
+			"code": "XTSE",
+			"hiqAbbr": "TOR",
+			"country": "CA",
+			"city": "Toronto",
+			"micCode": "XTSE",
+			"name": "Toronto Stock Exchange (TSX)"
+		}, {
+			"id": 893,
+			"code": "XTSX",
+			"hiqAbbr": "TSV",
+			"country": "CA",
+			"city": "Toronto",
+			"micCode": "XTSX",
+			"name": "Toronto Venture Exchange"
+		}, {
+			"id": 894,
+			"code": "CPH",
+			"hiqAbbr": "CSE",
+			"country": "CA",
+			"city": "Toronto",
+			"micCode": "XCNQ",
+			"name": "Canadian Securities Exchange (CSE)"
+		}, {
+			"id": 930,
+			"code": "XBKK",
+			"hiqAbbr": "SET",
+			"country": "TH",
+			"city": "Bangkok",
+			"micCode": "XBKK",
+			"name": "Stock Exchange of Thailand (SET)"
+		}, {
+			"id": 810,
+			"code": "XJSE",
+			"hiqAbbr": "JSE",
+			"country": "ZA",
+			"city": "Johannesburg",
+			"micCode": "XJSE",
+			"name": "Johannesburg Stock Exchange"
+		}, {
+			"id": 9999,
+			"hiqAbbr": "OTA",
+			"country": "XX",
+			"name": "OTC Bonds Amsterdam (OTA)"
+		}, {
+			"id": 1010,
+			"code": "OTCQ",
+			"hiqAbbr": "OTC",
+			"country": "US",
+			"city": "New York",
+			"micCode": "OTCQ",
+			"name": "OTC Markets Group"
+		}, {
+			"id": 384,
+			"code": "XDUB",
+			"hiqAbbr": "IRL",
+			"country": "IR",
+			"city": "Dublin",
+			"micCode": "XDUB",
+			"name": "Irish Stock Exchange (ISE)"
+		}, {
+			"id": 1008,
+			"code": "XSTO",
+			"hiqAbbr": "NDX",
+			"country": "SE",
+			"city": "Stockholm",
+			"micCode": "XNDX",
+			"name": "Nasdaq Derivatives Markets"
+		}, {
+			"id": 1007,
+			"code": "TOM",
+			"hiqAbbr": "TOM",
+			"country": "NL",
+			"city": "Amsterdam",
+			"micCode": "TOM",
+			"name": "The Order Machine (TOM)"
+		}, {
+			"id": 1006,
+			"code": "XLIF",
+			"hiqAbbr": "LFF",
+			"country": "XX",
+			"city": "Amsterdam",
+			"micCode": "XLIF",
+			"name": "Euronext NYSE Liffe"
+		}, {
+			"id": 663,
+			"code": "XNAS",
+			"hiqAbbr": "NDQ",
+			"country": "US",
+			"city": "New York",
+			"micCode": "XNAS",
+			"name": "NASDAQ"
+		}, {
+			"id": 1005,
+			"code": "AUTO",
+			"hiqAbbr": "CBO",
+			"country": "US",
+			"city": "Chicago",
+			"micCode": "XCBO",
+			"name": "Chicago Board Options Exchange (CBOE)"
+		}, {
+			"id": 1004,
+			"code": "ARCX",
+			"hiqAbbr": "NYA",
+			"country": "US",
+			"city": "New York",
+			"micCode": "ARCX",
+			"name": "NYSE Arca"
+		}, {
+			"id": 1003,
+			"code": "ICE",
+			"hiqAbbr": "ICE",
+			"country": "US",
+			"city": "Atlanta",
+			"micCode": "IEPA",
+			"name": "Intercontinental-Exchange (ICE)"
+		}, {
+			"id": 1002,
+			"code": "XSES",
+			"hiqAbbr": "SGX",
+			"country": "SG",
+			"city": "Singapore",
+			"micCode": "XSES",
+			"name": "Singapore Exchange (SGX)"
+		}, {
+			"id": 820,
+			"code": "XTAE",
+			"hiqAbbr": "TAX",
+			"country": "IL",
+			"city": "Tel Aviv",
+			"micCode": "XTAE",
+			"name": "Tel Aviv Stock Exchange"
+		}, {
+			"id": 1001,
+			"code": "HE",
+			"hiqAbbr": "HSE",
+			"country": "FI",
+			"city": "Helsinki",
+			"micCode": "XHEL",
+			"name": "OMX Helsinki"
+		}, {
+			"id": 305,
+			"hiqAbbr": "BEO",
+			"country": "BE",
+			"city": "Brussels",
+			"name": "Euronext NYSE Liffe Brussels Options (BEO)"
+		}, {
+			"id": 10000,
+			"hiqAbbr": "FSM",
+			"country": "XX",
+			"city": "Amsterdam",
+			"name": "FundShare Matching"
+		}, {
+			"id": 10002,
+			"code": "XGFS",
+			"hiqAbbr": "KFS",
+			"country": "NL",
+			"city": "Amsterdam",
+			"micCode": "XGFS",
+			"name": "Global Fund Services"
+		}, {
+			"id": 10001,
+			"hiqAbbr": "MNF",
+			"country": "XX",
+			"name": "MNF Matching"
+		}, {
+			"id": 947,
+			"code": "XSWX",
+			"hiqAbbr": "SWX",
+			"country": "CH",
+			"city": "Zurich",
+			"micCode": "XSWX",
+			"name": "Swiss Stock Exchange (SWX)"
+		}, {
+			"id": 10003,
+			"hiqAbbr": "MSF",
+			"country": "XX",
+			"name": "MS Cash Funds"
+		}, {
+			"id": 709,
+			"hiqAbbr": "FRF",
+			"country": "FR",
+			"city": "Paris",
+			"name": "Euronext NYSE Liffe Paris Futures (FRF)"
+		}, {
+			"id": 676,
+			"code": "XNYS",
+			"hiqAbbr": "NSY",
+			"country": "US",
+			"city": "New York",
+			"micCode": "XNYS",
+			"name": "New York Stock Exchange"
+		}, {
+			"id": 830,
+			"code": "XCAI",
+			"hiqAbbr": "EGX",
+			"country": "EG",
+			"city": "Cairo",
+			"micCode": "XCAI",
+			"name": "Egyptian Exchange"
+		}, {
+			"id": 710,
+			"code": "XPAR",
+			"hiqAbbr": "EPA",
+			"country": "FR",
+			"city": "Paris",
+			"micCode": "XPAR",
+			"name": "Euronext Paris"
+		}, {
+			"id": 712,
+			"code": "XMLI",
+			"hiqAbbr": "MLI",
+			"country": "FR",
+			"city": "Paris",
+			"micCode": "XMLI",
+			"name": "Euronext Access Paris"
+		}, {
+			"id": 714,
+			"hiqAbbr": "FRO",
+			"country": "FR",
+			"city": "Paris",
+			"name": "Euronext NYSE Liffe Paris Options (FRO)"
+		}, {
+			"id": 2000,
+			"code": "BCUR",
+			"hiqAbbr": "FXX",
+			"country": "XX",
+			"micCode": "BCUR",
+			"name": "Currencies"
+		}, {
+			"id": 560,
+			"code": "XLIS",
+			"hiqAbbr": "ELI",
+			"country": "PR",
+			"city": "Lissabon",
+			"micCode": "XLIS",
+			"name": "Euronext Lisbon"
+		}, {
+			"id": 320,
+			"code": "XBRU",
+			"hiqAbbr": "EBR",
+			"country": "BE",
+			"city": "Brussels",
+			"micCode": "XBRU",
+			"name": "Euronext Brussels"
+		}, {
+			"id": 200,
+			"code": "XAMS",
+			"hiqAbbr": "EAM",
+			"country": "NL",
+			"city": "Amsterdam",
+			"micCode": "XAMS",
+			"name": "Euronext Amsterdam"
+		}, {
+			"id": 324,
+			"hiqAbbr": "BEF",
+			"country": "BE",
+			"city": "Brussels",
+			"name": "Euronext NYSE Liffe Brussels Futures (BEF)1"
+		}, {
+			"id": 720,
+			"code": "XLUX",
+			"hiqAbbr": "LUX",
+			"country": "LU",
+			"city": "Luxembourg",
+			"micCode": "XLUX",
+			"name": "Luxembourg Stock Exchange"
+		}, {
+			"id": 841,
+			"code": "XSFE",
+			"hiqAbbr": "SFE",
+			"country": "AU",
+			"city": "Sydney",
+			"micCode": "XSFE",
+			"name": "Sydney Futures Exchange (SFE)"
+		}, {
+			"id": 688,
+			"code": "BATS",
+			"hiqAbbr": "BTS",
+			"country": "US",
+			"city": "New York",
+			"micCode": "BATS",
+			"name": "BATS Exchange"
+		}, {
+			"id": 608,
+			"code": "MTAA",
+			"hiqAbbr": "MIL",
+			"country": "IT",
+			"city": "Milan",
+			"micCode": "MTAA",
+			"name": "Borsa Italiana S.p.A."
+		}, {
+			"id": 5001,
+			"code": "XTKS",
+			"hiqAbbr": "TSE",
+			"country": "JP",
+			"city": "Tokyo",
+			"micCode": "XTKS",
+			"name": "Tokyo Stock Exchange (TSE)"
+		}, {
+			"id": 5002,
+			"code": "XASX",
+			"hiqAbbr": "ASX",
+			"country": "AU",
+			"city": "Sydney",
+			"micCode": "XASX",
+			"name": "Australian Securities Exchange (ASX)"
+		}, {
+			"id": 5003,
+			"code": "XNSE",
+			"hiqAbbr": "NSE",
+			"country": "IN",
+			"city": "Mumbai",
+			"micCode": "XNSE",
+			"name": "National Exchange Of India Limited"
+		}, {
+			"id": 5004,
+			"code": "XOSE",
+			"hiqAbbr": "OSE",
+			"country": "JP",
+			"city": "Osaka",
+			"micCode": "XOSE",
+			"name": "Osaka Stock Exchange (OSE)"
+		}, {
+			"id": 690,
+			"code": "OL",
+			"hiqAbbr": "OMO",
+			"country": "NO",
+			"city": "Oslo",
+			"micCode": "XOSL",
+			"name": "OMX Stockholm NOK EQUITIES"
+		}, {
+			"id": 570,
+			"code": "XLON",
+			"hiqAbbr": "LSE",
+			"country": "UK",
+			"city": "London",
+			"micCode": "XLON",
+			"name": "London Stock Exchange (LSE)"
+		}, {
+			"id": 850,
+			"code": "XBUD",
+			"hiqAbbr": "BSE",
+			"country": "HU",
+			"city": "Budapest",
+			"micCode": "XBUD",
+			"name": "Budapest Stock Exchange"
+		}, {
+			"id": 454,
+			"code": "XHKG",
+			"hiqAbbr": "HKS",
+			"country": "HK",
+			"city": "Hong Kong",
+			"micCode": "XHKG",
+			"name": "Hong Kong Stock Exchange"
+		}, {
+			"id": 212,
+			"hiqAbbr": "NLF",
+			"country": "NL",
+			"city": "Amsterdam",
+			"name": "Euronext NYSE Liffe Amsterdam Futures (NLF)"
+		}, {
+			"id": 213,
+			"hiqAbbr": "NLO",
+			"country": "NL",
+			"city": "Amsterdam",
+			"name": "Euronext NYSE Liffe Amsterdam Futures (NLO)"
+		}, {
+			"id": 455,
+			"code": "XHKF",
+			"hiqAbbr": "HFE",
+			"country": "HK",
+			"city": "Hong Kong",
+			"micCode": "XHKF",
+			"name": "Hong Kong Futures Exchange"
+		}, {
+			"id": 610,
+			"code": "MIBO",
+			"hiqAbbr": "MIB",
+			"country": "IT",
+			"city": "Milan",
+			"micCode": "XDMI",
+			"name": "Borsa Italiana Derivatives"
+		}, {
+			"id": 3333,
+			"hiqAbbr": "MSS",
+			"country": "XX",
+			"name": "MorganStanleyIndexSwap"
+		}, {
+			"id": 613,
+			"hiqAbbr": "LIF",
+			"country": "GB",
+			"city": "London",
+			"name": "Euronext NYSE Liffe London Futures (LFF)"
+		}, {
+			"id": 855,
+			"code": "XPRA",
+			"hiqAbbr": "PSE",
+			"country": "CZ",
+			"city": "Prague",
+			"micCode": "XPRA",
+			"name": "Prague Stock Exchange (PSE)"
+		}, {
+			"id": 219,
+			"code": "ASEX",
+			"hiqAbbr": "ATH",
+			"country": "GR",
+			"city": "Athens",
+			"micCode": "ASEX",
+			"name": "Athens Stock Exchange (ATHEX)1"
+		}, {
+			"id": 615,
+			"hiqAbbr": "LFO",
+			"country": "GB",
+			"city": "London",
+			"name": "Euronext NYSE Liffe London Options (LFO)"
+		}, {
+			"id": 616,
+			"hiqAbbr": "LFU",
+			"country": "GB",
+			"city": "New York",
+			"name": "Euronext NYSE Liffe U.S. Futures"
+		}, {
+			"id": 979,
+			"code": "XVTX",
+			"hiqAbbr": "VTX",
+			"country": "CH",
+			"city": "Zurich",
+			"micCode": "XVTX",
+			"name": "SIX Swiss Exchange (Virt-x)"
+		}, {
+			"id": 5010,
+			"code": "XBCL",
+			"hiqAbbr": "BEC",
+			"country": "CL",
+			"city": "Santiago",
+			"micCode": "XBCL",
+			"name": "La Bolsa Electronica de Chile"
+		}, {
+			"id": 1570,
+			"code": "L",
+			"hiqAbbr": "CHL",
+			"country": "GB",
+			"city": "London",
+			"micCode": "CHIX",
+			"name": "CHI-X LSE"
+		}, {
+			"id": 185,
+			"code": "XEUR",
+			"hiqAbbr": "ERX",
+			"country": "DE",
+			"city": "Frankfurt",
+			"micCode": "XEUR",
+			"name": "Eurex"
+		}, {
+			"id": 460,
+			"code": "IS",
+			"hiqAbbr": "ISE",
+			"country": "TR",
+			"city": "Istanbul",
+			"micCode": "XIST",
+			"name": "Istanbul Stock Exchange"
+		}, {
+			"id": 462,
+			"hiqAbbr": "TKD",
+			"country": "TR",
+			"city": "Izmir",
+			"name": "Turkish Derivatives Exchange"
+		}, {
+			"id": 860,
+			"code": "ST",
+			"hiqAbbr": "OMX",
+			"country": "SE",
+			"city": "Stockholm",
+			"micCode": "XSTO",
+			"name": "OMX Stockholm"
+		}, {
+			"id": 189,
+			"code": "XEEE",
+			"hiqAbbr": "EEX",
+			"country": "DE",
+			"micCode": "XEEE",
+			"name": "European Energy Exchange AG"
+		}, {
+			"id": 1200,
+			"code": "AS",
+			"hiqAbbr": "CHA",
+			"country": "NL",
+			"city": "Amsterdam",
+			"micCode": "CHIX",
+			"name": "CHI-X Amsterdam"
+		}, {
+			"id": 866,
+			"code": "FNSE",
+			"hiqAbbr": "FNS",
+			"country": "SE",
+			"city": "Stockholm",
+			"micCode": "FNSE",
+			"name": "First North Stockholm"
+		}, {
+			"id": 5005,
+			"code": "XPHS",
+			"hiqAbbr": "PHE",
+			"country": "PH",
+			"city": "Pasig city",
+			"micCode": "XPHS",
+			"name": "Philippine Stock Exchange"
+		}, {
+			"id": 900,
+			"code": "XKLZ",
+			"hiqAbbr": "MYX",
+			"country": "MY",
+			"city": "Kuala Lumpur",
+			"micCode": "XKLS",
+			"name": "Bursa Malaysia (MYX)"
+		}, {
+			"id": 5006,
+			"code": "XSHE",
+			"hiqAbbr": "SSX",
+			"country": "CN",
+			"city": "Shenzhen",
+			"micCode": "XSHE",
+			"name": "Shenzhen Stock Exchange"
+		}, {
+			"id": 1608,
+			"hiqAbbr": "CHB",
+			"country": "IT",
+			"city": "London",
+			"micCode": "CHIX",
+			"name": "CHI-X BIT"
+		}, {
+			"id": 5007,
+			"code": "XNSA",
+			"hiqAbbr": "NSA",
+			"country": "NG",
+			"city": "Lagos",
+			"micCode": "XNSA",
+			"name": "The Nigerian Stock Exchange"
+		}, {
+			"id": 5008,
+			"code": "XHSX",
+			"hiqAbbr": "HSX",
+			"country": "VN",
+			"city": "Ho Chi Minh",
+			"micCode": "XSTC",
+			"name": "Hochiminh Stock Exchange (HSX)"
+		}, {
+			"id": 5009,
+			"code": "XCAS",
+			"hiqAbbr": "CAS",
+			"country": "MA",
+			"city": "Casablanca",
+			"micCode": "XCAS",
+			"name": "Bourse de Casablanca (CAS)"
+		}, {
+			"id": 508,
+			"code": "CO",
+			"hiqAbbr": "OMK",
+			"country": "DK",
+			"city": "Copenhagen",
+			"micCode": "XCSE",
+			"name": "OMX Copenhagen"
+		}
+	],
+	"indices": [
+		{
+			"id": 106002,
+			"name": "SDAX"
+		}, {
+			"id": 106001,
+			"name": "MDAX"
+		}, {
+			"id": 102002,
+			"name": "Bel Small"
+		}, {
+			"id": 112003,
+			"name": "OMX Helsinki First North"
+		}, {
+			"id": 102001,
+			"name": "Bel Mid"
+		}, {
+			"id": 112002,
+			"name": "OMX Helsinki Cap"
+		}, {
+			"id": 106003,
+			"name": "TECDAX"
+		}, {
+			"id": 125001,
+			"name": "Hang Seng Index"
+		}, {
+			"id": 115001,
+			"name": "Mercado Alternativo Bursatil MAB"
+		}, {
+			"id": 115002,
+			"name": "Mercado Continuo"
+		}, {
+			"id": 122001,
+			"name": "NASDAQ 100",
+			"productId": 12153880
+		}, {
+			"id": 10,
+			"name": "IBEX 35",
+			"productId": 4626845
+		}, {
+			"id": 11,
+			"name": "FTSE MIB",
+			"productId": 11138345
+		}, {
+			"id": 109006,
+			"name": "OMX Copenhagen 25 Cap"
+		}, {
+			"id": 105001,
+			"name": "ATX"
+		}, {
+			"id": 12,
+			"name": "DOW JONES",
+			"productId": 4836603
+		}, {
+			"id": 13,
+			"name": "S&P 100"
+		}, {
+			"id": 14,
+			"name": "S&P 500",
+			"productId": 1796639
+		}, {
+			"id": 113006,
+			"name": "FTSE Small Cap"
+		}, {
+			"id": 15,
+			"name": "OMX Copenhagen 20 Cap"
+		}, {
+			"id": 109002,
+			"name": "OMXC Nordic 40"
+		}, {
+			"id": 113005,
+			"name": "FTSE TECHMARK 100"
+		}, {
+			"id": 16,
+			"name": "OMX Helsinki 25"
+		}, {
+			"id": 109003,
+			"name": "OMXC Mid Cap"
+		}, {
+			"id": 105002,
+			"name": "ATX Prime"
+		}, {
+			"id": 113004,
+			"name": "FTSE ALLSHARE"
+		}, {
+			"id": 17,
+			"name": "OMX Stockholm 30",
+			"productId": 5585061
+		}, {
+			"id": 109004,
+			"name": "OMXC Small Cap"
+		}, {
+			"id": 101001,
+			"name": "CAC Small"
+		}, {
+			"id": 113003,
+			"name": "FTSE AIM 100"
+		}, {
+			"id": 109005,
+			"name": "OMX Copenhagen First North"
+		}, {
+			"id": 18,
+			"name": "PSI 20",
+			"productId": 5289917
+		}, {
+			"id": 19,
+			"name": "SMI",
+			"productId": 6278565
+		}, {
+			"id": 109001,
+			"name": "OMXC Large Cap"
+		}, {
+			"id": 126001,
+			"name": "Straits Times Index"
+		}, {
+			"id": 1,
+			"name": "AEX",
+			"productId": 1037624
+		}, {
+			"id": 116001,
+			"name": "BIST 30"
+		}, {
+			"id": 2,
+			"name": "AMX"
+		}, {
+			"id": 3,
+			"name": "ASCX"
+		}, {
+			"id": 4,
+			"name": "BEL 20",
+			"productId": 4824939
+		}, {
+			"id": 5,
+			"name": "CAC 40",
+			"productId": 4824940
+		}, {
+			"id": 6,
+			"name": "DAX",
+			"productId": 900830
+		}, {
+			"id": 112001,
+			"name": "OMX Helsinki 15"
+		}, {
+			"id": 9,
+			"name": "FTSE 100",
+			"productId": 11138356
+		}, {
+			"id": 110004,
+			"name": "FTSE Italia Star"
+		}, {
+			"id": 110005,
+			"name": "FTSE AIM Italia"
+		}, {
+			"id": 110002,
+			"name": "FTSE Italia ALL-SHS"
+		}, {
+			"id": 108001,
+			"name": "FTSE/ATHEX Large Cap"
+		}, {
+			"id": 110003,
+			"name": "FTSE Italia Mid Cap"
+		}, {
+			"id": 108002,
+			"name": "FTSE/ATHEX Mid Cap"
+		}, {
+			"id": 108003,
+			"name": "FTSE/ATHEX Global"
+		}, {
+			"id": 104001,
+			"name": "PX TR"
+		}, {
+			"id": 110001,
+			"name": "FTSE IT Small Cap"
+		}, {
+			"id": 114004,
+			"name": "ISEQ Small Cap"
+		}, {
+			"id": 114005,
+			"name": "ISEQ 20"
+		}, {
+			"id": 114006,
+			"name": "ISEQ General"
+		}, {
+			"id": 123001,
+			"name": "NIKKEI 225"
+		}, {
+			"id": 120003,
+			"name": "OMX Stockholm Large Cap"
+		}, {
+			"id": 120004,
+			"name": "OMX Stockholm First North"
+		}, {
+			"id": 120005,
+			"name": "OMX Nordic 40"
+		}, {
+			"id": 117001,
+			"name": "EURO STOXX 50",
+			"productId": 4836600
+		}, {
+			"id": 120001,
+			"name": "OMX Stockholm Mid Cap"
+		}, {
+			"id": 120002,
+			"name": "OMX Stockholm Small Cap"
+		}, {
+			"id": 101002,
+			"name": "CAC Next 20"
+		}, {
+			"id": 113002,
+			"name": "FTSE 350"
+		}, {
+			"id": 101003,
+			"name": "CAC Mid 60"
+		}, {
+			"id": 113001,
+			"name": "FTSE 250"
+		}, {
+			"id": 101004,
+			"name": "CAC Large 60"
+		}, {
+			"id": 101005,
+			"name": "SBF 120"
+		}, {
+			"id": 101006,
+			"name": "Cac All Tradable"
+		}, {
+			"id": 107002,
+			"name": "BUMIX"
+		}, {
+			"id": 107001,
+			"name": "BUX"
+		}, {
+			"id": 111005,
+			"name": "Oslo Bors Equity Certificate Index (OSEEX)"
+		}, {
+			"id": 111003,
+			"name": "Oslo Bors All-share Index (OSEAX)"
+		}, {
+			"id": 103001,
+			"name": "WIG20"
+		}, {
+			"id": 111004,
+			"name": "Oslo Axess All-share Index (OAAX)"
+		}, {
+			"id": 111001,
+			"name": "Oslo Bors OBX"
+		}, {
+			"id": 103003,
+			"name": "WIG80"
+		}, {
+			"id": 111002,
+			"name": "Oslo Bors Benchmark Index (OSEBX)"
+		}, {
+			"id": 103002,
+			"name": "WIG40"
+		}, {
+			"id": 124001,
+			"name": "ASX 200"
+		}, {
+			"id": 121004,
+			"name": "SXI LIFE SCIENCES",
+			"productId": 11875106
+		}, {
+			"id": 121001,
+			"name": "SPI",
+			"productId": 11875103
+		}, {
+			"id": 114001,
+			"name": "ISEQ ESM"
+		}, {
+			"id": 114002,
+			"name": "ISEQ Financial"
+		}, {
+			"id": 121003,
+			"name": "SMIM",
+			"productId": 11875105
+		}, {
+			"id": 114003,
+			"name": "ISEQ Overall"
+		}, {
+			"id": 121002,
+			"name": "SLI",
+			"productId": 11875104
+		}
+	],
+	"regions": [
+		{
+			"id": 1,
+			"name": "Europe",
+			"translation": "translation.label.117"
+		}, {
+			"id": 2,
+			"name": "America",
+			"translation": "translation.label.118"
+		}, {
+			"id": 3,
+			"name": "Other",
+			"translation": "translation.label.121"
+		}
+	],
+	"countries": [
+		{
+			"id": 908,
+			"name": "FI",
+			"translation": "list.country.908",
+			"region": 1
+		}, {
+			"id": 895,
+			"name": "ES",
+			"translation": "list.country.895",
+			"region": 1
+		}, {
+			"id": 953,
+			"name": "HU",
+			"translation": "list.country.953",
+			"region": 1
+		}, {
+			"id": 975,
+			"name": "DK",
+			"translation": "list.country.975",
+			"region": 1
+		}, {
+			"id": 954,
+			"name": "PT",
+			"translation": "list.country.954",
+			"region": 1
+		}, {
+			"id": 899,
+			"name": "SE",
+			"translation": "list.country.899",
+			"region": 1
+		}, {
+			"id": 976,
+			"name": "CH",
+			"translation": "list.country.976",
+			"region": 1
+		}, {
+			"id": 911,
+			"name": "NO",
+			"translation": "list.country.911",
+			"region": 1
+		}, {
+			"id": 978,
+			"name": "NL",
+			"translation": "list.country.978",
+			"region": 1
+		}, {
+			"id": 957,
+			"name": "AT",
+			"translation": "list.country.957",
+			"region": 1
+		}, {
+			"id": 913,
+			"name": "PL",
+			"translation": "list.country.913",
+			"region": 1
+		}, {
+			"id": 959,
+			"name": "CZ",
+			"translation": "list.country.959",
+			"region": 1
+		}, {
+			"id": 915,
+			"name": "IT",
+			"translation": "list.country.915",
+			"region": 1
+		}, {
+			"id": 1030,
+			"name": "SG",
+			"translation": "list.country.1030",
+			"region": 3
+		}, {
+			"id": 880,
+			"name": "TR",
+			"translation": "list.country.880",
+			"region": 1
+		}, {
+			"id": 982,
+			"name": "BE",
+			"translation": "list.country.982",
+			"region": 1
+		}, {
+			"id": 940,
+			"name": "GR",
+			"translation": "list.country.940",
+			"region": 1
+		}, {
+			"id": 886,
+			"name": "FR",
+			"translation": "list.country.886",
+			"region": 1
+		}, {
+			"id": 963,
+			"name": "IE",
+			"translation": "list.country.963",
+			"region": 1
+		}, {
+			"id": 985,
+			"name": "SB",
+			"translation": "list.country.985",
+			"region": 3
+		}, {
+			"id": 1023,
+			"name": "HK",
+			"translation": "list.country.1023",
+			"region": 3
+		}, {
+			"id": 845,
+			"name": "CA",
+			"translation": "list.country.845",
+			"region": 2
+		}, {
+			"id": 923,
+			"name": "GB",
+			"translation": "list.country.923",
+			"region": 1
+		}, {
+			"id": 846,
+			"name": "US",
+			"translation": "list.country.846",
+			"region": 2
+		}, {
+			"id": 849,
+			"name": "AU",
+			"translation": "list.country.849",
+			"region": 3
+		}, {
+			"id": 905,
+			"name": "JP",
+			"translation": "list.country.905",
+			"region": 3
+		}, {
+			"id": 906,
+			"name": "DE",
+			"translation": "list.country.906",
+			"region": 1
+		}
+	],
+	"productTypes": [
+		{
+			"id": 13,
+			"name": "fund",
+			"translation": "contract.type.13",
+			"briefTranslation": "contract.type.brief.13",
+			"contractType": "FND"
+		}, {
+			"id": 14,
+			"name": "leveraged",
+			"translation": "contract.type.14",
+			"briefTranslation": "contract.type.brief.14",
+			"contractType": "TURBO"
+		}, {
+			"id": 180,
+			"name": "index",
+			"translation": "translation.label.180",
+			"briefTranslation": "translation.label.180",
+			"contractType": "IDX"
+		}, {
+			"id": 131,
+			"name": "etf",
+			"translation": "contract.type.131",
+			"briefTranslation": "contract.type.brief.131",
+			"contractType": "STOCK"
+		}, {
+			"id": 1,
+			"name": "stock",
+			"translation": "contract.type.1",
+			"briefTranslation": "contract.type.brief.1",
+			"contractType": "STOCK"
+		}, {
+			"id": 2,
+			"name": "bond",
+			"translation": "contract.type.2",
+			"briefTranslation": "contract.type.brief.2",
+			"contractType": "BOND"
+		}, {
+			"id": 311,
+			"name": "cash",
+			"translation": "translation.label.570",
+			"briefTranslation": "translation.label.570",
+			"contractType": "FND"
+		}, {
+			"id": 3,
+			"name": "currency",
+			"translation": "contract.type.3",
+			"briefTranslation": "contract.type.brief.3",
+			"contractType": "CUR"
+		}, {
+			"id": 7,
+			"name": "future",
+			"translation": "contract.type.7",
+			"briefTranslation": "contract.type.brief.7",
+			"contractType": "FUT"
+		}, {
+			"id": 535,
+			"name": "cfd",
+			"translation": "translation.label.535",
+			"briefTranslation": "contract.type.brief.535",
+			"contractType": "CFDMS"
+		}, {
+			"id": 536,
+			"name": "warrant",
+			"translation": "translation.label.536",
+			"briefTranslation": "contract.type.brief.536",
+			"contractType": "STOCK"
+		}, {
+			"id": 8,
+			"name": "option",
+			"translation": "contract.type.8",
+			"briefTranslation": "contract.type.brief.8",
+			"contractType": "OPT"
+		}
+	],
+	"etfFeeTypes": [
+		{
+			"id": 1,
+			"name": "Trackers",
+			"translation": "contract.type.131"
+		}, {
+			"id": 2,
+			"name": "Free",
+			"translation": "translation.label.388"
+		}, {
+			"id": 15,
+			"name": "ETN",
+			"translation": "etf.type.etn"
+		}
+	],
+	"investmentFundFeeTypes": [
+		{
+			"id": 0,
+			"name": "Rebate-free",
+			"translation": "translation.label.387"
+		}, {
+			"id": 3,
+			"name": "Rebate-free FREE",
+			"translation": "translation.label.386"
+		}
+	],
+	"optionAggregateTypes": [
+		{
+			"id": "month",
+			"name": "month"
+		}, {
+			"id": "derivativeExchange",
+			"name": "derivativeExchange"
+		}, {
+			"id": "year",
+			"name": "year"
+		}, {
+			"id": "strike",
+			"name": "strike"
+		}
+	],
+	"leveragedAggregateTypes": [
+		{
+			"id": "shortLong",
+			"name": "shortLong"
+		}, {
+			"id": "underlyingProductId",
+			"name": "underlyingProductId"
+		}, {
+			"id": "exchange",
+			"name": "exchange"
+		}, {
+			"id": "underlying",
+			"name": "underlying"
+		}, {
+			"id": "issuer",
+			"name": "issuer"
+		}, {
+			"id": "expirationDateRange",
+			"name": "expirationDateRange"
+		}
+	],
+	"etfAggregateTypes": [
+		{
+			"id": "quoteCurrency",
+			"name": "quoteCurrency"
+		}, {
+			"id": "totalExpenseRatioInterval",
+			"name": "totalExpenseRatioInterval"
+		}, {
+			"id": "administrator",
+			"name": "administrator"
+		}, {
+			"id": "exchange",
+			"name": "exchange"
+		}, {
+			"id": "region",
+			"name": "region"
+		}, {
+			"id": "assetAllocation",
+			"name": "assetAllocation"
+		}, {
+			"id": "issuer",
+			"name": "issuer"
+		}, {
+			"id": "benchmark",
+			"name": "benchmark"
+		}
+	],
+	"investmentFundAggregateTypes": [
+		{
+			"id": "issuer",
+			"name": "issuer"
+		}
+	],
+	"lookupSortColumns": [
+		{
+			"id": "exchangeHiqAbbr"
+		}, {
+			"id": "name"
+		}, {
+			"id": "exchangeName"
+		}, {
+			"id": "productType"
+		}
+	],
+	"stockSortColumns": [
+		{
+			"id": "exchangeHiqAbbr"
+		}, {
+			"id": "name"
+		}, {
+			"id": "exchangeName"
+		}
+	],
+	"bondSortColumns": [
+		{
+			"id": "exchangeHiqAbbr"
+		}, {
+			"id": "name"
+		}, {
+			"id": "exchangeName"
+		}
+	],
+	"cfdSortColumns": [
+		{
+			"id": "exchangeHiqAbbr"
+		}, {
+			"id": "name"
+		}, {
+			"id": "exchangeName"
+		}
+	],
+	"etfSortColumns": [
+		{
+			"id": "quoteCurrency"
+		}, {
+			"id": "administrator"
+		}, {
+			"id": "exchangeHiqAbbr"
+		}, {
+			"id": "name"
+		}, {
+			"id": "exchangeName"
+		}, {
+			"id": "region"
+		}, {
+			"id": "assetAllocation"
+		}, {
+			"id": "benchmark"
+		}
+	],
+	"futureSortColumns": [
+		{
+			"id": "exchangeHiqAbbr"
+		}, {
+			"id": "name"
+		}, {
+			"id": "exchangeName"
+		}, {
+			"id": "expirationDate"
+		}
+	],
+	"investmentFundSortColumns": [
+		{
+			"id": "exchangeHiqAbbr"
+		}, {
+			"id": "name"
+		}, {
+			"id": "exchangeName"
+		}
+	],
+	"leveragedSortColumns": [
+		{
+			"id": "leverage"
+		}, {
+			"id": "financingLevel"
+		}, {
+			"id": "stoploss"
+		}, {
+			"id": "exchangeHiqAbbr"
+		}, {
+			"id": "name"
+		}, {
+			"id": "exchangeName"
+		}, {
+			"id": "expirationDate"
+		}
+	],
+	"optionSortColumns": [
+		{
+			"id": "strike"
+		}, {
+			"id": "expirationDate"
+		}
+	]
+}

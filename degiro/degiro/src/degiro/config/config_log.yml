@@ -1,0 +1,29 @@
+version: 1
+disable_existing_loggers: False
+formatters:
+  simple:
+    format: "%(name)s - %(funcName)s - %(levelname)s - %(message)s"
+  top:
+    format: "%(levelname)s %(asctime)s [%(name)s.%(funcName)s:%(lineno)d] %(message)s"
+
+handlers:
+  console:
+    class: logging.StreamHandler
+    level: DEBUG
+    formatter: top
+
+  file_handler:
+    class: logging.FileHandler
+    level: DEBUG
+    formatter: top
+    filename: trace.log
+    encoding: utf8
+
+loggers:
+  DEGIRO:
+    handlers: [console, file_handler]
+    propagate: no
+
+root:
+  level: DEBUG
+  handlers: []

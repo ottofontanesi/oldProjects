@@ -1,0 +1,11 @@
+{
+    "WIDIBA" : {
+        "ENGINE" : {"host": "pickingserver64bis", "port": "10180", "path": "/WPEService/WPEngineService"},
+        "BS" : {"host": "wam-pfp-svil-15", "port": "18080", "path": "/Recommendation/ws"}
+    },
+    "MPS" : {
+        "ENGINE" : {"host": "pickingserver64bis", "port": "9280", "path": "/FEService/financialEngineService"},
+        "BS" : {"host": "wam-pfp-svil-15", "port": "8888", "path": "/Recommendation/ws"}
+    },
+    "UBI" : {"host": "192.168.39.18", "port": "8080", "path": "/PPESR2/financialEngineService"}
+}

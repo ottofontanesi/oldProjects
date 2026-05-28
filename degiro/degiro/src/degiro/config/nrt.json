@@ -1,0 +1,5 @@
+{
+    "WIDIBA" : "/opt/ADVEnginesNRT/deploy/WIDIBA-ENGINE/tests/soap-client",
+    "MPS" : "/opt/ADVEnginesNRT/deploy/MPS-ENGINE/tests/soap-client",
+    "SPK" : "/opt/ADVEnginesNRT/deploy/SPARKASSE-ENGINE/tests/soap-client"
+}

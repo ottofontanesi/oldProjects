@@ -1,0 +1,20 @@
+io:
+  DB_IP: 192.168.6.118
+  SERVER_NAME: hal9000
+  PORT: 1433
+  DATABASE_NAME: UBIPCF_PPE_Logs
+  DATABASE_NAME_RRM: BancaLombarda
+  UID: alm
+  PWD: alm
+  TDS_VERSION: "7.3"
+  DRIVER_PATH: /usr/local/lib/libtdsodbc.so
+locale: it_IT
+preproc:
+  DEFAULT_NDG_COL: ndg
+  DEFAULT_SESSION_COL: sessionID
+  DEFAULT_REQUEST_COL: TipoRic
+  DEFAULT_PAYLOAD_COL: JSON
+  DEFAULT_TIMESTAMP_COL: TimeStamp
+  HOST: 'pickingserver64bis'
+  PORT: '8080'
+  PATH: '/PPESR2/financialEngineService'
